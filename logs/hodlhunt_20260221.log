@@ -1,0 +1,232 @@
+2026-02-21 07:51:28 [INFO] Backend ready
+2026-02-21 07:51:58 [INFO] Scheduler: fetching my fish...
+2026-02-21 07:51:58 [INFO] Scheduler: my fish 'dazay' ~0.4531 SOL (share=187889712)
+2026-02-21 07:51:58 [INFO] Scheduler: loading all fish...
+2026-02-21 07:51:58 [INFO] Scheduler: 1558 fish loaded
+2026-02-21 07:51:58 [INFO] Scheduler: filters — own=1 heavy=1151 <0.2SOL=275 marked=28 expired=0 → 103 candidates
+2026-02-21 07:51:58 [INFO] Scheduler: 10 targets queued, running...
+2026-02-21 09:22:40 [INFO] Sending mark for [rokot]...
+2026-02-21 09:22:40 [INFO] [+] Mark 'rokot' sent: 5xjpChMmTtyzE4y97w4jfo6Tqqem3swnefS3LQbjCG3yvcixkvzd7BzsHEjsATSXJmQCRRPRFnrLKdZ4ttsVmqmm
+2026-02-21 09:22:45 [INFO] [!] Mark 'rokot' CONFIRM FAILED:
+2026-02-21 09:22:45 [INFO] [i] Sig was: 5xjpChMmTtyzE4y97w4jfo6Tqqem3swnefS3LQbjCG3yvcixkvzd7BzsHEjsATSXJmQCRRPRFnrLKdZ4ttsVmqmm — check on Solscan
+2026-02-21 09:22:45 [INFO] OK [rokot]: 5xдjpChMmTtyzE4y97w4jfo6Tqqem3swnefS3LQbjCG3yvcixkvzd7BzsHEjsATSXJmQCRRPRFnrLKdZ4ttsVmqmm2026-02-21 11:11:09 [INFO] Backend ready
+2026-02-21 11:11:20 [INFO] Scheduler: fetching my fish...
+2026-02-21 11:11:20 [INFO] Scheduler: my fish 'dazay' ~0.4534 SOL (share=187889712)
+2026-02-21 11:11:20 [INFO] Scheduler: loading all fish...
+2026-02-21 11:11:21 [INFO] Scheduler: 1560 fish loaded
+2026-02-21 11:11:21 [INFO] Scheduler: filters — own=1 heavy=1160 <0.25SOL=307 marked=26 expired=0 → 66 candidates
+2026-02-21 11:11:21 [INFO] Scheduler: 4 targets queued, running...
+2026-02-21 11:11:24 [INFO] Scheduler stopped & queue cleared
+2026-02-21 11:11:24 [INFO] Scheduler cancelled
+2026-02-21 11:11:24 [INFO] Scheduler: cancelled by user
+2026-02-21 11:11:26 [INFO] Scheduler: fetching my fish...
+2026-02-21 11:11:26 [ERROR] Couldn't find your fish
+2026-02-21 11:11:42 [INFO] Scheduler: fetching my fish...
+2026-02-21 11:11:42 [INFO] Scheduler: my fish 'dazay' ~0.4534 SOL (share=187889712)
+2026-02-21 11:11:42 [INFO] Scheduler: loading all fish...
+2026-02-21 11:11:42 [INFO] Scheduler: 1560 fish loaded
+2026-02-21 11:11:42 [INFO] Scheduler: filters — own=1 heavy=1160 <0.25SOL=307 marked=26 expired=0 → 66 candidates
+2026-02-21 11:11:42 [INFO] Scheduler: 4 targets queued, running...
+2026-02-21 11:42:04 [INFO] Scheduler stopped & queue cleared
+2026-02-21 11:42:04 [INFO] Scheduler cancelled
+2026-02-21 11:42:04 [INFO] Scheduler: cancelled by user
+2026-02-21 11:42:33 [ERROR] Load all fish first (Fish List → Load All Fish)
+2026-02-21 11:42:34 [ERROR] Load all fish first (Fish List → Load All Fish)
+2026-02-21 11:42:34 [ERROR] Load all fish first (Fish List → Load All Fish)
+2026-02-21 11:43:24 [INFO] Scheduler: fetching my fish...
+2026-02-21 11:43:24 [INFO] Scheduler: my fish 'dazay' ~0.4534 SOL (share=187889712)
+2026-02-21 11:43:24 [INFO] Scheduler: loading all fish...
+2026-02-21 11:43:24 [INFO] Scheduler: 1560 fish loaded
+2026-02-21 11:43:24 [INFO] Scheduler: filters — own=1 heavy=1160 <0.25SOL=306 marked=27 expired=0 → 66 candidates
+2026-02-21 11:43:24 [INFO] Scheduler: 4 targets queued, running...
+2026-02-21 11:43:32 [INFO] Queued HUNT for 'waterhamster'
+2026-02-21 11:43:57 [INFO] Queue cleared
+2026-02-21 11:44:10 [INFO] Scheduler stopped & queue cleared
+2026-02-21 11:44:10 [INFO] Scheduler cancelled
+2026-02-21 11:44:10 [INFO] Scheduler: cancelled by user
+2026-02-21 11:44:12 [INFO] Scheduler: fetching my fish...
+2026-02-21 11:44:12 [INFO] Scheduler: my fish 'dazay' ~0.4534 SOL (share=187889712)
+2026-02-21 11:44:12 [INFO] Scheduler: loading all fish...
+2026-02-21 11:44:13 [INFO] Scheduler: 1560 fish loaded
+2026-02-21 11:44:13 [INFO] Scheduler: filters — own=1 heavy=1160 <0.25SOL=306 marked=27 expired=0 → 66 candidates
+2026-02-21 11:44:13 [INFO] Scheduler: 4 targets queued, running...
+2026-02-21 14:31:54 [INFO] Sending [Savg]...
+2026-02-21 14:31:54 [INFO] [+] Mark 'Savg' sent: 61NieoXaWWDhukUWzmWJZ1xQdMRFgd4A4f75MhVbVuUNvKqGPXwHPmfymi67dz8JuCP4pN7SBy8cMtpWU5JHzcTi
+2026-02-21 14:31:59 [INFO] [!] Mark 'Savg' CONFIRM FAILED:
+2026-02-21 14:31:59 [INFO] [i] Sig was: 61NieoXaWWDhukUWzmWJZ1xQdMRFgd4A4f75MhVbVuUNvKqGPXwHPmfymi67dz8JuCP4pN7SBy8cMtpWU5JHzcTi — check on Solscan
+2026-02-21 14:31:59 [INFO] OK [Savg]: 61NieoXaWWDhukUWzmWJZ1xQdMRFgd4A4f75MhVbVuUNvKqGPXwHPmfymi67dz8JuCP4pN7SBy8cMtpWU5JHzcTi
+2026-02-21 15:22:51 [INFO] Queued HUNT for 'waterhamster'
+2026-02-21 17:15:53 [INFO] Backend ready
+2026-02-21 17:15:54 [INFO] Activity feed connected
+2026-02-21 17:16:45 [INFO] Queued HUNT for 'waterhamster'
+2026-02-21 17:21:34 [INFO] Backend ready
+2026-02-21 17:21:34 [INFO] Activity feed connected
+2026-02-21 17:22:42 [INFO] Queued HUNT for 'waterhamster'
+2026-02-21 17:28:17 [INFO] Backend ready
+2026-02-21 17:28:17 [INFO] Activity feed connected
+2026-02-21 17:28:38 [INFO] Queued HUNT for 'Lole'
+2026-02-21 18:07:49 [INFO] Backend ready
+2026-02-21 18:07:49 [INFO] Activity feed connected
+2026-02-21 18:22:05 [INFO] Auto-refresh disabled
+2026-02-21 18:22:05 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 18:22:05 [INFO] Backend ready
+2026-02-21 18:22:05 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 18:22:05 [INFO] Activity feed connected
+2026-02-21 18:23:59 [INFO] Auto-refresh disabled
+2026-02-21 18:23:59 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 18:23:59 [INFO] Backend ready
+2026-02-21 18:23:59 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 18:23:59 [INFO] Activity feed connected
+2026-02-21 18:26:13 [INFO] Settings saved to /home/dazay/Desktop/tools/hodlhuntSol/.env
+2026-02-21 18:27:14 [INFO] Auto-refresh disabled
+2026-02-21 18:27:14 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 18:27:14 [INFO] Backend ready
+2026-02-21 18:27:14 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 18:27:14 [INFO] Activity feed connected
+2026-02-21 18:29:35 [INFO] Auto-refresh disabled
+2026-02-21 18:29:35 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 18:29:35 [INFO] Backend ready
+2026-02-21 18:29:35 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 18:29:35 [INFO] Activity feed connected
+2026-02-21 18:31:34 [INFO] Auto-refresh disabled
+2026-02-21 18:31:34 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 18:31:34 [INFO] Backend ready
+2026-02-21 18:31:34 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 18:31:34 [INFO] Activity feed connected
+2026-02-21 18:33:52 [INFO] Scheduler: fetching my fish...
+2026-02-21 18:33:52 [INFO] Scheduler: my fish 'dazay' ~0.4541 SOL (share=187889712)
+2026-02-21 18:33:52 [INFO] Scheduler: loading all fish...
+2026-02-21 18:33:52 [INFO] Scheduler: 0 fish loaded
+2026-02-21 18:33:52 [INFO] Scheduler: filters — own=0 heavy=0 <0.1SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-21 18:33:52 [INFO] Scheduler: no schedulable prey found
+2026-02-21 18:34:05 [INFO] Scheduler: fetching my fish...
+2026-02-21 18:34:05 [INFO] Scheduler: my fish 'dazay' ~0.4541 SOL (share=187889712)
+2026-02-21 18:34:05 [INFO] Scheduler: loading all fish...
+2026-02-21 18:34:05 [INFO] Scheduler: 1566 fish loaded
+2026-02-21 18:34:05 [INFO] Scheduler: filters — own=1 heavy=1175 <0.1SOL=122 marked=33 expired=0 → 235 candidates
+2026-02-21 18:34:05 [INFO] Scheduler: 5 targets queued, running...
+2026-02-21 18:45:24 [INFO] Auto-refresh disabled
+2026-02-21 18:45:24 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 18:45:24 [INFO] Backend ready
+2026-02-21 18:45:24 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 18:45:24 [INFO] Activity feed connected
+2026-02-21 19:00:27 [INFO] Auto-refresh disabled
+2026-02-21 19:00:27 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 19:00:27 [INFO] Backend ready
+2026-02-21 19:00:27 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 19:00:27 [INFO] Activity feed connected
+2026-02-21 19:04:47 [INFO] Scheduler: fetching my fish...
+2026-02-21 19:04:47 [INFO] Scheduler: my fish 'dazay' ~0.4542 SOL (share=187889712)
+2026-02-21 19:04:47 [INFO] Scheduler: loading all fish...
+2026-02-21 19:04:47 [INFO] Scheduler: 1567 fish loaded
+2026-02-21 19:04:47 [INFO] Scheduler: filters — own=1 heavy=1178 <0.4SOL=348 marked=30 expired=0 → 10 candidates
+2026-02-21 19:04:47 [INFO] Scheduler: 5 targets queued, running...
+2026-02-21 19:24:55 [INFO] Bite priority: checking Lole (Hunt In=0, Mark expires 30m 00s)
+2026-02-21 19:24:55 [INFO] Bite priority check: Lole owner=PnepvoJy... mark_exp=1800s
+2026-02-21 19:24:56 [INFO] Bite priority: Lole READY, не покормилась — уведомление отправлено
+2026-02-21 19:24:56 [INFO] Bite priority notified: Lole 0.1212 SOL hunt_in=0s
+2026-02-21 19:25:14 [INFO] [+] HuntFish sent: SoAhPF4R1QQ8VNkpFU8WdRk1egCUgkVgoC9nMp9dK8Md12fzASF15ND3i23MTkPhPvFpWwczpUvJZxQZ3ibbu1k
+2026-02-21 19:25:19 [INFO] [!] HuntFish CONFIRM FAILED:
+2026-02-21 19:25:19 [INFO] [i] Sig was: SoAhPF4R1QQ8VNkpFU8WdRk1egCUgkVgoC9nMp9dK8Md12fzASF15ND3i23MTkPhPvFpWwczpUvJZxQZ3ibbu1k — check on Solscan
+2026-02-21 19:25:19 [INFO] [+] HuntFish sent: 4kzh7Fe6DB8C5Bp3PAFfBCq8taWD7o9uGB9ZQrmpLbP4wwi8JaaBrTVJuMEteiLkQ4oKNJbocKtK4WZCHyTyU4Ry
+2026-02-21 19:25:19 [INFO] [!] HuntFish CONFIRM FAILED:
+2026-02-21 19:25:19 [INFO] [i] Sig was: 4kzh7Fe6DB8C5Bp3PAFfBCq8taWD7o9uGB9ZQrmpLbP4wwi8JaaBrTVJuMEteiLkQ4oKNJbocKtK4WZCHyTyU4Ry — check on Solscan
+2026-02-21 19:25:58 [INFO] [+] HuntFish sent: 3pAehBdirWozz6bamfVEmad2dGvFW8EX7LhDvExPC8T5ucGbhAfSc8FfggQPXqMtrhrpJ8gSz7sW4oyGTbHWQdYB
+2026-02-21 19:26:03 [INFO] [!] HuntFish CONFIRM FAILED:
+2026-02-21 19:26:03 [INFO] [i] Sig was: 3pAehBdirWozz6bamfVEmad2dGvFW8EX7LhDvExPC8T5ucGbhAfSc8FfggQPXqMtrhrpJ8gSz7sW4oyGTbHWQdYB — check on Solscan
+2026-02-21 19:31:07 [INFO] [+] HuntFish sent: 4oucyeLQFpWVLWxr5DdjeWSr3QQnP4EoCjYzWUdAnVLYHezWwKtELU92ma2sahE4LTPi8Mghvsyx3hvSMdGc3kU4
+2026-02-21 19:31:12 [INFO] [!] HuntFish CONFIRM FAILED:
+2026-02-21 19:31:12 [INFO] [i] Sig was: 4oucyeLQFpWVLWxr5DdjeWSr3QQnP4EoCjYzWUdAnVLYHezWwKtELU92ma2sahE4LTPi8Mghvsyx3hvSMdGc3kU4 — check on Solscan
+2026-02-21 19:39:18 [INFO] Auto-refresh disabled
+2026-02-21 19:39:18 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 19:39:18 [INFO] Backend ready
+2026-02-21 19:39:18 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 19:39:18 [INFO] Activity feed connected
+2026-02-21 19:39:26 [INFO] Bite priority: checking Lole (Hunt In=0, Mark expires 15m 29s)
+2026-02-21 19:39:26 [INFO] Bite priority check: Lole owner=PnepvoJy... mark_exp=929s
+2026-02-21 19:39:26 [INFO] Bite priority: Lole READY, не покормилась — уведомление отправлено
+2026-02-21 19:39:26 [INFO] Bite priority notified: Lole 0.0000 SOL hunt_in=0s
+2026-02-21 19:39:32 [INFO] Scheduler: fetching my fish...
+2026-02-21 19:39:32 [INFO] Scheduler: my fish 'dazay' ~0.5512 SOL (share=227997710)
+2026-02-21 19:39:32 [INFO] Scheduler: loading all fish...
+2026-02-21 19:39:32 [INFO] Scheduler: 0 fish loaded
+2026-02-21 19:39:32 [INFO] Scheduler: filters — own=0 heavy=0 <0.4SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-21 19:39:32 [INFO] Scheduler: no schedulable prey found
+2026-02-21 19:39:39 [INFO] Scheduler: fetching my fish...
+2026-02-21 19:39:40 [INFO] Scheduler: my fish 'dazay' ~0.5512 SOL (share=227997710)
+2026-02-21 19:39:40 [INFO] Scheduler: loading all fish...
+2026-02-21 19:39:40 [INFO] Scheduler: 0 fish loaded
+2026-02-21 19:39:40 [INFO] Scheduler: filters — own=0 heavy=0 <0.4SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-21 19:39:40 [INFO] Scheduler: no schedulable prey found
+2026-02-21 19:39:41 [INFO] Scheduler: fetching my fish...
+2026-02-21 19:39:41 [ERROR] Couldn't find your fish
+2026-02-21 19:39:56 [INFO] Scheduler: fetching my fish...
+2026-02-21 19:39:56 [INFO] Scheduler: my fish 'dazay' ~0.5512 SOL (share=227997710)
+2026-02-21 19:39:56 [INFO] Scheduler: loading all fish...
+2026-02-21 19:39:56 [INFO] Scheduler: 1567 fish loaded
+2026-02-21 19:39:56 [INFO] Scheduler: filters — own=1 heavy=1143 <0.4SOL=349 marked=30 expired=0 → 44 candidates
+2026-02-21 19:39:56 [INFO] Scheduler: 5 targets queued, running...
+2026-02-21 19:40:30 [INFO] Scheduler stopped & queue cleared
+2026-02-21 19:40:30 [INFO] Scheduler cancelled
+2026-02-21 19:40:30 [INFO] Scheduler: cancelled by user
+2026-02-21 19:40:38 [INFO] Scheduler: fetching my fish...
+2026-02-21 19:40:38 [INFO] Scheduler: my fish 'dazay' ~0.5512 SOL (share=227997710)
+2026-02-21 19:40:38 [INFO] Scheduler: loading all fish...
+2026-02-21 19:40:39 [INFO] Scheduler: 1567 fish loaded
+2026-02-21 19:40:39 [INFO] Scheduler: filters — own=1 heavy=1143 <0.4SOL=349 marked=30 expired=0 → 44 candidates
+2026-02-21 19:40:39 [INFO] Scheduler: 10 targets queued, running...
+2026-02-21 19:40:52 [INFO] Scheduler stopped & queue cleared
+2026-02-21 19:40:52 [INFO] Scheduler cancelled
+2026-02-21 19:40:52 [INFO] Scheduler: cancelled by user
+2026-02-21 19:40:53 [INFO] Scheduler: fetching my fish...
+2026-02-21 19:40:53 [INFO] Scheduler: my fish 'dazay' ~0.5512 SOL (share=227997710)
+2026-02-21 19:40:53 [INFO] Scheduler: loading all fish...
+2026-02-21 19:40:53 [INFO] Scheduler: 1567 fish loaded
+2026-02-21 19:40:53 [INFO] Scheduler: filters — own=1 heavy=1143 <0.35SOL=339 marked=30 expired=0 → 54 candidates
+2026-02-21 19:40:53 [INFO] Scheduler: 10 targets queued, running...
+2026-02-21 19:41:06 [INFO] Scheduler stopped & queue cleared
+2026-02-21 19:41:06 [INFO] Scheduler cancelled
+2026-02-21 19:41:06 [INFO] Scheduler: cancelled by user
+2026-02-21 19:41:07 [INFO] Scheduler: fetching my fish...
+2026-02-21 19:41:08 [INFO] Scheduler: my fish 'dazay' ~0.5512 SOL (share=227997710)
+2026-02-21 19:41:08 [INFO] Scheduler: loading all fish...
+2026-02-21 19:41:08 [INFO] Scheduler: 1567 fish loaded
+2026-02-21 19:41:08 [INFO] Scheduler: filters — own=1 heavy=1143 <0.3SOL=318 marked=30 expired=0 → 75 candidates
+2026-02-21 19:41:08 [INFO] Scheduler: 10 targets queued, running...
+2026-02-21 19:41:14 [INFO] Scheduler stopped & queue cleared
+2026-02-21 19:41:14 [INFO] Scheduler cancelled
+2026-02-21 19:41:14 [INFO] Scheduler: cancelled by user
+2026-02-21 19:42:02 [INFO] Queued MARK for 'kangoo1991'
+2026-02-21 19:42:18 [INFO] Queued MARK for 'Snitch'
+2026-02-21 19:43:08 [INFO] Auto-refresh disabled
+2026-02-21 19:43:08 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 19:43:08 [INFO] Backend ready
+2026-02-21 19:43:08 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 19:43:08 [INFO] Activity feed connected
+2026-02-21 19:43:09 [INFO] Loaded 2 pending targets from cache
+2026-02-21 19:43:25 [INFO] Bite priority: checking Lole (Hunt In=0, Mark expires 11m 30s)
+2026-02-21 19:43:25 [INFO] Bite priority check: Lole owner=PnepvoJy... mark_exp=690s
+2026-02-21 19:43:26 [INFO] Bite priority: Lole READY, не покормилась — уведомление отправлено
+2026-02-21 19:43:26 [INFO] Bite priority notified: Lole 0.0000 SOL hunt_in=0s
+2026-02-21 19:50:47 [INFO] Auto-refresh disabled
+2026-02-21 19:50:47 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 19:50:47 [INFO] Backend ready
+2026-02-21 19:50:47 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 19:50:47 [INFO] Activity feed connected
+2026-02-21 19:50:47 [INFO] Loaded 2 pending targets from cache
+2026-02-21 19:51:30 [INFO] Bite priority: checking Lole (Hunt In=0, Mark expires 03m 25s)
+2026-02-21 19:51:30 [INFO] Bite priority check: Lole owner=PnepvoJy... mark_exp=205s
+2026-02-21 19:51:30 [INFO] Bite priority: Lole READY, не покормилась — уведомление отправлено
+2026-02-21 19:51:30 [INFO] Bite priority notified: Lole 0.0000 SOL hunt_in=0s
+2026-02-21 20:06:13 [INFO] Auto-refresh disabled
+2026-02-21 20:06:13 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 20:06:13 [INFO] Backend ready
+2026-02-21 20:06:13 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 20:06:13 [INFO] Activity feed connected
+2026-02-21 20:06:14 [INFO] Loaded 2 pending targets from cache
+2026-02-21 20:35:20 [INFO] Auto-refresh disabled
+2026-02-21 20:35:20 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-21 20:35:20 [INFO] Backend ready
+2026-02-21 20:35:20 [INFO] CU updated: limit=200000, price=375000
+2026-02-21 20:35:21 [INFO] Activity feed connected
+2026-02-21 20:35:21 [INFO] Loaded 2 pending targets from cache

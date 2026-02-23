@@ -9,6 +9,25 @@ import json
 import re
 import threading
 from datetime import datetime
+import asyncio
+import solana
+from solana.rpc.async_api import AsyncClient, GetTokenAccountsByOwnerResp
+from solders.transaction import Transaction
+
+from solders.system_program import TransferParams as p
+import spl
+import spl.token
+import spl.token.constants
+from spl.token.instructions import get_associated_token_address, create_associated_token_account, transfer, close_account, TransferParams
+from solders.system_program import transfer as ts
+from solders.system_program import TransferParams as tsf
+from spl.token.constants import TOKEN_PROGRAM_ID, ASSOCIATED_TOKEN_PROGRAM_ID
+from solana.rpc.types import TxOpts, TokenAccountOpts
+from solana.rpc.types import TxOpts
+import solders
+from solders.message import Message
+from typing import List, Dict, Any, Optional, Union
+
 
 # Path setup: hodlhuntSol and OrbisPayClean
 _hodlhunt_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -19,13 +38,61 @@ if os.path.exists(_orbis):
     sys.path.insert(0, _orbis)
 
 from PyQt6.QtCore import QThread, pyqtSignal
-from OrbisPaySDK.interface.sol import SOL
-from OrbisPaySDK.const import LAMPORTS_PER_SOL
 
+    
 try:
+    from OrbisPaySDK.interface.sol import SOL
+    from OrbisPaySDK.const import LAMPORTS_PER_SOL
+
     from OrbisPaySDK.utils import utils as _price_utils
     HAS_SOL_PRICE = True
 except ImportError:
+    LAMPORTS_PER_SOL = 1_000_000_000
+    class SOL:
+        def __init__(self, rpc_url = "https://api.mainnet-beta.solana.com", KEYPAIR: Optional[Union[str, solders.keypair.Keypair]] = None,TOKEN_MINT: Optional[str] = None):
+                self.rpc_url = rpc_url
+        
+                self.client = AsyncClient(rpc_url)
+                self.KEYPAIR = None
+                self.PROGRAM_ID = TOKEN_PROGRAM_ID # Default to the SPL Token Program ID
+                self.TOKEN_MINT = TOKEN_MINT
+                self.WRAPED_SOL_ID = spl.token.constants.WRAPPED_SOL_MINT
+                if KEYPAIR:
+                    self.set_keypair(KEYPAIR)
+
+        def set_keypair(self, KEYPAIR: Union[str, solders.keypair.Keypair]):
+            if isinstance(KEYPAIR, str):
+                try:
+                    self.KEYPAIR = solders.keypair.Keypair.from_base58_string(KEYPAIR)
+                except Exception as e:
+                    raise ValueError(f"Invalid Keypair string: {e}")
+            elif isinstance(KEYPAIR, solders.keypair.Keypair):
+                self.KEYPAIR = KEYPAIR
+            else:
+                raise ValueError("KEYPAIR must be a Keypair instance or a base58 encoded string.")
+
+        def set_params(self, rpc_url: Optional[str] = None, KEYPAIR: Optional[Union[str, solders.keypair.Keypair]] = None,TOKEN_MINT: Optional[str] = None):
+            if rpc_url:
+                self.rpc_url = rpc_url
+                self.client = AsyncClient(rpc_url)
+            if KEYPAIR:
+                self.set_keypair(KEYPAIR)            
+            if TOKEN_MINT:
+                self.TOKEN_MINT = TOKEN_MINT
+
+        def get_pubkey(self, returnString: Optional[bool] = None):
+
+            
+            if self.KEYPAIR:
+                pubkey = self.KEYPAIR.pubkey()
+                pubkey_str = str(pubkey)
+                if returnString:
+                    return pubkey_str
+                return pubkey
+            
+            raise ValueError("Keypair not set")
+
+
     HAS_SOL_PRICE = False
 
 try:
@@ -62,6 +129,7 @@ class AsyncWorker(QThread):
     sig_activity = pyqtSignal(dict)
     sig_tx_status = pyqtSignal(str, bool, str, str)
     sig_bite_check = pyqtSignal(str, str, int, bool, float, int)
+    sig_mark_api_fetched = pyqtSignal(dict)  # {fish_id, owner, name, last_fed_at, mark_expires_at, fed_in_last_24h}
     sig_fish_updated = pyqtSignal(dict)
     sig_sol_price = pyqtSignal(float)
     sig_wallet_balance = pyqtSignal(int)
@@ -304,6 +372,19 @@ class AsyncWorker(QThread):
             ok = sig is not None
             label = args.get("label", "Mark")
             self.sig_tx_status.emit("mark", ok, label, sig or "")
+            if ok:
+                try:
+                    from config import append_hunter_mark
+                    append_hunter_mark({
+                        "owner": args["wallet"],
+                        "fish_id": args["fish_id"],
+                        "name": args.get("name", ""),
+                        "share": args.get("share", 0),
+                        "last_fed_at": args.get("last_fed_at", 0),
+                        "sig": sig or "",
+                    })
+                except Exception:
+                    pass
         elif cmd == "hunt_fish":
             sig = await h.hunt_fish(args["wallet"], args["fish_id"], args["name"], args["share"], hunter_fish_id=args.get("hunter_fish_id"))
             ok = sig is not None
@@ -313,6 +394,42 @@ class AsyncWorker(QThread):
             h.cu_limit = args["cu_limit"]
             h.cu_price = args["cu_price"]
             self.sig_log.emit(f"CU updated: limit={h.cu_limit}, price={h.cu_price}")
+        elif cmd == "check_mark_api":
+            fish_id = args.get("fish_id")
+            owner = args.get("owner", "")
+            name = args.get("name", "")
+            if not fish_id:
+                return
+            try:
+                from main import get_fish_info_api
+                info = await asyncio.to_thread(get_fish_info_api, fish_id)
+            except Exception:
+                return
+            if not info:
+                return
+            last_fed_str = info.get("lastFedAt")
+            mark_exp_str = info.get("markExpiresAt")
+
+            def _parse_ts(s):
+                if not s:
+                    return 0
+                try:
+                    return int(datetime.fromisoformat(s.replace("Z", "+00:00")).timestamp())
+                except Exception:
+                    return 0
+
+            last_fed_at = _parse_ts(last_fed_str)
+            mark_expires_at = _parse_ts(mark_exp_str)
+            now = int(time.time())
+            fed_in_last_24h = (now - last_fed_at) < 86400 if last_fed_at else False
+            self._safe_emit(self.sig_mark_api_fetched, {
+                "fish_id": fish_id,
+                "owner": owner,
+                "name": name,
+                "last_fed_at": last_fed_at,
+                "mark_expires_at": mark_expires_at,
+                "fed_in_last_24h": fed_in_last_24h,
+            })
         elif cmd == "check_bite_window":
             fresh = await h.get_fish(args["owner"], args["fish_id"])
             ocean = await h.get_ocean()
@@ -515,6 +632,19 @@ class AsyncWorker(QThread):
             sig = await h._send_tx([ix], label)
             if sig:
                 self._safe_emit(self.sig_queue_item_done, qid, "done", sig)
+                if action == "mark":
+                    try:
+                        from config import append_hunter_mark
+                        append_hunter_mark({
+                            "owner": target["owner"],
+                            "fish_id": target["fish_id"],
+                            "name": target.get("name", ""),
+                            "share": target.get("share", 0),
+                            "last_fed_at": target.get("last_fed_at", 0),
+                            "sig": sig,
+                        })
+                    except Exception:
+                        pass
             else:
                 self._safe_emit(self.sig_queue_item_done, qid, "failed", "tx rejected (see log)")
         except Exception as e:

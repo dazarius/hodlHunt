@@ -19,13 +19,15 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import Qt, QTimer, QDateTime
 from PyQt6.QtGui import QColor, QAction
 
-from OrbisPaySDK.const import LAMPORTS_PER_SOL
+LAMPORTS_PER_SOL = 1_000_000_000
+
 
 from config import (
     load_wallets_config,
     save_wallets_config,
     all_sched_cache_paths,
     SCHEDULE_TRANSACTIONS_PATH,
+    load_hunter_marks,
     file_logger,
     BASE_DIR,
 )
@@ -55,6 +57,7 @@ class HodlHuntUI(QMainWindow):
         self._my_fish: dict | None = None
         self._my_fish_list: list[dict] = []
         self._marked_fish: list[dict] = []
+        self._hunter_marks_from_file: list[dict] = []
         self._schedule_targets: list[dict] = []
         self._schedule_start_time = 0
         self._activity_list: list[dict] = []
@@ -74,6 +77,7 @@ class HodlHuntUI(QMainWindow):
         self._worker.sig_activity.connect(self._on_activity)
         self._worker.sig_tx_status.connect(self._on_tx_status)
         self._worker.sig_bite_check.connect(self._on_bite_check)
+        self._worker.sig_mark_api_fetched.connect(self._on_mark_api_fetched)
         self._worker.sig_fish_updated.connect(self._on_fish_updated)
         self._worker.sig_ready.connect(self._on_worker_ready)
         self._worker.sig_all_wallets_fish.connect(self._on_all_wallets_fish)
@@ -81,6 +85,7 @@ class HodlHuntUI(QMainWindow):
 
         self._bite_notified: set[tuple[str, int]] = set()  # (owner, fish_id) already notified
         self._bite_check_pending: set[tuple[str, int]] = set()  # check in progress
+        self._pending_bite_after_api: set[tuple[str, int]] = set()  # ждём API перед bite check
         self._sched_cache_loaded = False
         self._transactions_loaded = False
         self._sched_auto_run_cooldown = 0
@@ -103,6 +108,11 @@ class HodlHuntUI(QMainWindow):
         self._price_timer = QTimer(self)
         self._price_timer.timeout.connect(lambda: self._worker.send("get_sol_price"))
         self._price_timer.start(30_000)
+
+        self._marks_api_timer = QTimer(self)
+        self._marks_api_timer.timeout.connect(self._check_marks_via_api)
+        self._marks_api_timer.start(30_000)
+        QTimer.singleShot(5000, self._check_marks_via_api)
 
         QTimer.singleShot(600, lambda: self._worker.send("get_sol_price"))
         QTimer.singleShot(0, self._load_sched_cache)
@@ -233,6 +243,7 @@ class HodlHuntUI(QMainWindow):
         self._worker.sig_activity.connect(self._on_activity)
         self._worker.sig_tx_status.connect(self._on_tx_status)
         self._worker.sig_bite_check.connect(self._on_bite_check)
+        self._worker.sig_mark_api_fetched.connect(self._on_mark_api_fetched)
         self._worker.sig_fish_updated.connect(self._on_fish_updated)
         self._worker.sig_sol_price.connect(self._on_sol_price)
         self._worker.sig_wallet_balance.connect(self._on_wallet_balance)
@@ -246,6 +257,7 @@ class HodlHuntUI(QMainWindow):
         self._marked_fish = []
         self._bite_notified.clear()
         self._bite_check_pending.clear()
+        self._pending_bite_after_api.clear()
         self._sched_cache_loaded = False
 
         self._redraw_dashboard()
@@ -595,7 +607,7 @@ class HodlHuntUI(QMainWindow):
         self._populate_marks()
 
     def _populate_marks(self):
-        if not hasattr(self, "marks_table") or not self._all_fish:
+        if not hasattr(self, "marks_table"):
             return
         my_ids = set()
         if self._my_fish_list:
@@ -615,6 +627,26 @@ class HodlHuntUI(QMainWindow):
         feeding_period = self.sch_feed_days.value() * 86400
 
         marked = [f for f in self._all_fish if f.get("marked_by_hunter_id", 0) in my_ids]
+        marked_ids = {(f["owner"], f["fish_id"]) for f in marked}
+        for entry in self._hunter_marks_from_file:
+            key = (entry.get("owner", ""), entry.get("fish_id", 0))
+            if key in marked_ids:
+                continue
+            found = next((f for f in self._all_fish if f.get("owner") == entry.get("owner") and f.get("fish_id") == entry.get("fish_id")), None)
+            if found:
+                if found.get("marked_by_hunter_id", 0) in my_ids:
+                    continue
+                marked.append(found)
+            else:
+                marked.append({
+                    "owner": entry.get("owner", ""),
+                    "fish_id": entry.get("fish_id", 0),
+                    "name": entry.get("name", "?"),
+                    "share": entry.get("share", 0),
+                    "last_fed_at": entry.get("last_fed_at", 0),
+                    "mark_expires_at": 0,
+                })
+            marked_ids.add(key)
         self.marks_table.setRowCount(0)
 
         for f in marked:
@@ -631,11 +663,11 @@ class HodlHuntUI(QMainWindow):
             ow_item.setToolTip(f["owner"])
             self.marks_table.setItem(row, 2, ow_item)
 
-            prey_time = f["last_fed_at"] + feeding_period
-            prey_str = datetime.fromtimestamp(prey_time).strftime("%m-%d %H:%M")
+            prey_time = f["last_fed_at"] + feeding_period if f.get("last_fed_at") else 0
+            prey_str = datetime.fromtimestamp(prey_time).strftime("%m-%d %H:%M") if prey_time > 0 else "—"
             self.marks_table.setItem(row, 3, QTableWidgetItem(prey_str))
 
-            hunt_rem = prey_time - now
+            hunt_rem = prey_time - now if prey_time > 0 else -1
             if hunt_rem > 0:
                 hunt_item = QTableWidgetItem(fmt_delta(hunt_rem))
                 hunt_item.setForeground(QColor("#d29922"))
@@ -1205,6 +1237,74 @@ class HodlHuntUI(QMainWindow):
                 self._all_fish[i] = fish
                 break
 
+    def _check_marks_via_api(self):
+        """Каждые 30 сек: для меток, которые ещё не истекли, запрос API и сверка."""
+        now = int(time.time())
+        for f in self._marked_fish:
+            mark_exp = f.get("mark_expires_at", 0) or 0
+            if mark_exp <= 0 or mark_exp <= now:
+                continue
+            self._worker.send(
+                "check_mark_api",
+                fish_id=f["fish_id"],
+                owner=f["owner"],
+                name=f["name"],
+            )
+
+    def _on_mark_api_fetched(self, data: dict):
+        """Обновить рыбу из API: last_fed_at, mark_expires_at. Если поела за 24ч — не триггерить bite."""
+        now = int(time.time())
+        fish_id = data.get("fish_id")
+        owner = data.get("owner", "")
+        name = data.get("name", "")
+        last_fed_at = data.get("last_fed_at", 0)
+        mark_expires_at = data.get("mark_expires_at", 0)
+        fed_in_last_24h = data.get("fed_in_last_24h", False)
+        k = (owner, fish_id)
+
+        if k in self._pending_bite_after_api:
+            self._pending_bite_after_api.discard(k)
+            if not fed_in_last_24h:
+                feeding_period = self.sch_feed_days.value() * 86400
+                self._bite_check_pending.add(k)
+                self._on_log(f"Bite priority: checking {name} (API: не ела 24ч)")
+                self._worker.send(
+                    "check_bite_window",
+                    owner=owner,
+                    fish_id=fish_id,
+                    name=name,
+                    last_fed_at=last_fed_at,
+                    feeding_period=feeding_period,
+                )
+
+        for i, f in enumerate(self._all_fish):
+            if f["owner"] == owner and f["fish_id"] == fish_id:
+                f["last_fed_at"] = last_fed_at
+                f["mark_expires_at"] = mark_expires_at
+                if fed_in_last_24h:
+                    self._bite_notified.discard((owner, fish_id))
+                    self._bite_check_pending.discard((owner, fish_id))
+                break
+
+        for i, f in enumerate(self._marked_fish):
+            if f["owner"] == owner and f["fish_id"] == fish_id:
+                f["last_fed_at"] = last_fed_at
+                f["mark_expires_at"] = mark_expires_at
+                break
+
+        if hasattr(self, "marks_table"):
+            for row in range(self.marks_table.rowCount()):
+                name_item = self.marks_table.item(row, 0)
+                if name_item and name_item.text() == name:
+                    feeding_period = self.sch_feed_days.value() * 86400
+                    prey_time = last_fed_at + feeding_period
+                    exp_rem = mark_expires_at - now if mark_expires_at > 0 else 0
+                    if exp_rem > 0:
+                        exp_item = self.marks_table.item(row, 5)
+                        if exp_item:
+                            exp_item.setText(fmt_delta(exp_rem))
+                    break
+
     def _on_bite_check(self, name: str, owner: str, fish_id: int, was_fed: bool, sol_value: float, hunt_in_sec: int):
         k = (owner, fish_id)
         self._bite_check_pending.discard(k)
@@ -1222,6 +1322,10 @@ class HodlHuntUI(QMainWindow):
             file_logger.info(f"Bite priority notified: {name} {sol_value:.4f} SOL hunt_in={hunt_in_sec}s")
 
     def _on_tx_status(self, action: str, success: bool, label: str, sig: str):
+        if success and action == "mark":
+            self._hunter_marks_from_file = load_hunter_marks()
+            if hasattr(self, "marks_table"):
+                self._populate_marks()
         if success and action == "create_fish":
             if hasattr(self, "inp_create_name"):
                 self.inp_create_name.clear()
@@ -1681,6 +1785,7 @@ class HodlHuntUI(QMainWindow):
         if not self._transactions_loaded:
             self._transactions_loaded = True
             self._load_transactions()
+        self._hunter_marks_from_file = load_hunter_marks()
         legacy = os.path.join(BASE_DIR, "scheduler_cache.json")
         paths = all_sched_cache_paths(len(self._wallets))
         if not any(os.path.exists(p) for _, p in paths) and os.path.exists(legacy):
@@ -2124,7 +2229,7 @@ class HodlHuntUI(QMainWindow):
 
         action = menu.exec(self.fish_table.viewport().mapToGlobal(pos))
         if action == act_mark:
-            self._worker.send("place_mark", wallet=fish["owner"], fish_id=fish["fish_id"], hunter_fish_id=self._my_fish["fish_id"] if self._my_fish else None, label=f"Mark '{fish['name']}'")
+            self._worker.send("place_mark", wallet=fish["owner"], fish_id=fish["fish_id"], name=fish["name"], share=fish.get("share", 0), last_fed_at=fish.get("last_fed_at", 0), hunter_fish_id=self._my_fish["fish_id"] if self._my_fish else None, label=f"Mark '{fish['name']}'")
         elif action == act_hunt:
             self._worker.send("hunt_fish", wallet=fish["owner"], fish_id=fish["fish_id"], name=fish["name"], share=fish["share"], hunter_fish_id=self._my_fish["fish_id"] if self._my_fish else None, label=f"Hunt '{fish['name']}'")
         elif action == act_queue_mark:
@@ -2208,19 +2313,12 @@ class HodlHuntUI(QMainWindow):
 
             if hunt_rem > 0 or mark_exp_rem <= 0 or mark_exp_rem > BITE_MARK_EXPIRES_SEC:
                 self._bite_notified.discard(k)
+                self._pending_bite_after_api.discard(k)
             elif hunt_rem <= 0 and 0 < mark_exp_rem <= BITE_MARK_EXPIRES_SEC:
-                if k not in self._bite_notified and k not in self._bite_check_pending:
-                    self._bite_check_pending.add(k)
-                    self._on_log(f"Bite priority: checking {fish['name']} (Hunt In=0, Mark expires {fmt_delta(mark_exp_rem)})")
-                    file_logger.info(f"Bite priority check: {fish['name']} owner={fish['owner'][:8]}... mark_exp={mark_exp_rem}s")
-                    self._worker.send(
-                        "check_bite_window",
-                        owner=fish["owner"],
-                        fish_id=fish["fish_id"],
-                        name=fish["name"],
-                        last_fed_at=fish["last_fed_at"],
-                        feeding_period=feeding_period,
-                    )
+                if k not in self._bite_notified and k not in self._bite_check_pending and k not in self._pending_bite_after_api:
+                    self._pending_bite_after_api.add(k)
+                    self._on_log(f"Bite priority: API check {fish['name']} (Hunt In=0, Mark expires {fmt_delta(mark_exp_rem)})")
+                    self._worker.send("check_mark_api", fish_id=fish["fish_id"], owner=fish["owner"], name=fish["name"])
             hunt_item = self.marks_table.item(i, 4)
             if hunt_item:
                 if hunt_rem > 0:

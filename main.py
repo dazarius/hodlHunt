@@ -1,9 +1,28 @@
 import asyncio
+from pickle import NONE
 import struct
 import time
 import os
 import httpx
 import base64
+import solana
+from solana.rpc.async_api import AsyncClient, GetTokenAccountsByOwnerResp
+from solders.transaction import Transaction
+
+from solders.system_program import TransferParams as p
+import spl
+import spl.token
+import spl.token.constants
+from spl.token.instructions import get_associated_token_address, create_associated_token_account, transfer, close_account, TransferParams
+from solders.system_program import transfer as ts
+from solders.system_program import TransferParams as tsf
+from spl.token.constants import TOKEN_PROGRAM_ID, ASSOCIATED_TOKEN_PROGRAM_ID
+from solana.rpc.types import TxOpts, TokenAccountOpts
+from solana.rpc.types import TxOpts
+import solders
+from solders.message import Message
+from typing import List, Dict, Any, Optional, Union
+
 
 from solders.pubkey import Pubkey
 from solders.instruction import Instruction, AccountMeta
@@ -11,8 +30,59 @@ from solders.message import Message
 from solders.transaction import Transaction
 from solders.compute_budget import set_compute_unit_limit, set_compute_unit_price
 
-from OrbisPaySDK.interface.sol import SOL
-from OrbisPaySDK.const import LAMPORTS_PER_SOL
+try:
+    from OrbisPaySDK.interface.sol import SOL
+    from OrbisPaySDK.const import LAMPORTS_PER_SOL
+
+    from OrbisPaySDK.utils import utils as _price_utils
+    HAS_SOL_PRICE = True
+except ImportError:
+    LAMPORTS_PER_SOL = 1_000_000_000
+    class SOL:
+        def __init__(self, rpc_url = "https://api.mainnet-beta.solana.com", KEYPAIR: Optional[Union[str, solders.keypair.Keypair]] = None,TOKEN_MINT: Optional[str] = None):
+                self.rpc_url = rpc_url
+        
+                self.client = AsyncClient(rpc_url)
+                self.KEYPAIR = None
+                self.PROGRAM_ID = TOKEN_PROGRAM_ID # Default to the SPL Token Program ID
+                self.TOKEN_MINT = TOKEN_MINT
+                self.WRAPED_SOL_ID = spl.token.constants.WRAPPED_SOL_MINT
+                if KEYPAIR:
+                    self.set_keypair(KEYPAIR)
+
+        def set_keypair(self, KEYPAIR: Union[str, solders.keypair.Keypair]):
+            if isinstance(KEYPAIR, str):
+                try:
+                    self.KEYPAIR = solders.keypair.Keypair.from_base58_string(KEYPAIR)
+                except Exception as e:
+                    raise ValueError(f"Invalid Keypair string: {e}")
+            elif isinstance(KEYPAIR, solders.keypair.Keypair):
+                self.KEYPAIR = KEYPAIR
+            else:
+                raise ValueError("KEYPAIR must be a Keypair instance or a base58 encoded string.")
+
+        def set_params(self, rpc_url: Optional[str] = None, KEYPAIR: Optional[Union[str, solders.keypair.Keypair]] = None,TOKEN_MINT: Optional[str] = None):
+            if rpc_url:
+                self.rpc_url = rpc_url
+                self.client = AsyncClient(rpc_url)
+            if KEYPAIR:
+                self.set_keypair(KEYPAIR)            
+            if TOKEN_MINT:
+                self.TOKEN_MINT = TOKEN_MINT
+
+        def get_pubkey(self, returnString: Optional[bool] = None):
+
+            
+            if self.KEYPAIR:
+                pubkey = self.KEYPAIR.pubkey()
+                pubkey_str = str(pubkey)
+                if returnString:
+                    return pubkey_str
+                return pubkey
+            
+            raise ValueError("Keypair not set")
+
+
 from solana.rpc.types import TxOpts
 from solana.rpc.commitment import Confirmed
 
@@ -928,28 +998,56 @@ class HodlHunt:
         ok = sum(1 for r in results if r)
         print(f"\n[*] Done: {ok}/{len(scheduled)} marks placed")
         return list(results)
-    def __get_mark_by_fish_id(self,fish_id_id):
-        api = f"https://api.hodlhunt.io/api/v1/fish/{fish_id_id}/info"
+def get_fish_info_api(fish_id: int) -> dict | None:
+    """Запрос к API HodlHunt: lastFedAt, markExpiresAt и др. Синхронный."""
+    api = f"https://api.hodlhunt.io/api/v1/fish/{fish_id}/info"
+    try:
+        r = httpx.get(api, timeout=10)
+        if r.status_code == 200:
+            data = r.json()
+            return data.get("data") if data.get("ok") else None
+        return None
+    except Exception:
+        return None
 
 
-        dict_marks = {}
 
-
-
-
+TEST_KEYPAIR = None
 async def main():
+    from dotenv import load_dotenv
+    load_dotenv()
+    global TEST_KEYPAIR
+    TEST_KEYPAIR = os.getenv("TEST_KEYPAIR")
+    if not TEST_KEYPAIR:
+        print("TEST_KEYPAIR not found in .env")
+        return
     sol = SOL(
         rpc_url="https://api.mainnet-beta.solana.com",
-        KEYPAIR="5GPm7ANTxp2ivmykSoHuh73b8T4XSv6iGa737sBUrpSMQVhDLjMH8aMHWC1sKjA3vbTm5buDamufUFNFHGe8Tc9Y",
+        KEYPAIR=TEST_KEYPAIR,
     )
 
     hunt = HodlHunt(sol)
     fishes = await hunt.get_all_fish_by_wallet(sol.get_pubkey())
     for fish in fishes: 
-        name_ui = fish["name"]
-        name_derive = derive_fish(owner=sol.get_pubkey(), fish_id=fish["fish_id"])
-        print(name_ui, name_derive, fish)
+        name_ui = fish["fish_id"]
+        info = get_fish_info_api(fish["fish_id"])
+        print(name_ui, info)
+
+async def main2():
+
+    if not TEST_KEYPAIR:
+        print("TEST_KEYPAIR not found in .env")
+        return
+    sol = SOL(
+        rpc_url="https://api.mainnet-beta.solana.com",
+        KEYPAIR=TEST_KEYPAIR,
+    )
+    hunt = HodlHunt(sol)
 
 
 if __name__ == "__main__":
+    from dotenv import load_dotenv
+    load_dotenv()
+    TEST_KEYPAIR = os.getenv("TEST_KEYPAIR")
+
     asyncio.run(main())

@@ -1,0 +1,648 @@
+2026-02-23 07:20:43 [INFO] Auto-refresh disabled
+2026-02-23 07:20:43 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-23 07:20:44 [INFO] Loaded 4 pending targets from cache (all wallets)
+2026-02-23 07:20:44 [INFO] Backend ready
+2026-02-23 07:20:44 [INFO] CU updated: limit=200000, price=375000
+2026-02-23 07:20:44 [INFO] Activity feed connected
+2026-02-23 07:20:45 [INFO] Loaded 4 pending targets from cache (all wallets)
+2026-02-23 07:20:46 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 07:20:46 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:20:47 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:20:48 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:21:01 [INFO] Queue cleared
+2026-02-23 07:21:10 [INFO] Scheduler: fetching my fish...
+2026-02-23 07:21:10 [INFO] Scheduler: my fish 'dazay' ~0.5573 SOL (share=227997710)
+2026-02-23 07:21:10 [INFO] Scheduler: loading all fish...
+2026-02-23 07:21:10 [INFO] Scheduler: 1584 fish loaded
+2026-02-23 07:21:10 [INFO] Scheduler: filters — own=2 heavy=1208 <0.4SOL=259 marked=82 expired=0 → 33 candidates
+2026-02-23 07:21:10 [INFO] Scheduler: 5 targets found and sent to queue.
+2026-02-23 07:21:11 [INFO] Queue [5f3b]: Successfully built instruction for 'Mark 'GenaCrypto''
+2026-02-23 07:21:11 [INFO] Queue [5f3b]: Sleeping for 44406s before 'Mark 'GenaCrypto''...
+2026-02-23 07:21:11 [INFO] Queue [b09f]: Successfully built instruction for 'Mark 'OkeanNbluXyu''
+2026-02-23 07:21:11 [INFO] Queue [b09f]: Sleeping for 7778s before 'Mark 'OkeanNbluXyu''...
+2026-02-23 07:21:11 [INFO] Queue [fc9a]: Successfully built instruction for 'Mark 'kangoo1991''
+2026-02-23 07:21:11 [INFO] Queue [fc9a]: Sleeping for 45130s before 'Mark 'kangoo1991''...
+2026-02-23 07:21:11 [INFO] Queue [621a]: Successfully built instruction for 'Mark 'Rriba''
+2026-02-23 07:21:11 [INFO] Queue [621a]: Sleeping for 60545s before 'Mark 'Rriba''...
+2026-02-23 07:21:11 [INFO] Queue [9877]: Successfully built instruction for 'Mark 'SHTYRMOVIK''
+2026-02-23 07:21:11 [INFO] Queue [9877]: Sleeping for 52115s before 'Mark 'SHTYRMOVIK''...
+2026-02-23 07:23:25 [INFO] Auto-refresh disabled
+2026-02-23 07:23:25 [INFO] Settings applied: CU limit=200000, priority fee=3750000
+2026-02-23 07:23:25 [INFO] CU updated: limit=200000, price=3750000
+2026-02-23 07:30:55 [INFO] Auto-refresh disabled
+2026-02-23 07:30:55 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-23 07:30:55 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 07:30:55 [INFO] Backend ready
+2026-02-23 07:30:55 [INFO] CU updated: limit=200000, price=375000
+2026-02-23 07:30:55 [INFO] FAILED [OkeanNbluXyu]: could not find your fish
+2026-02-23 07:30:55 [ERROR] Schedule mark failed [OkeanNbluXyu]: could not find your fish
+2026-02-23 07:30:55 [INFO] FAILED [kangoo1991]: could not find your fish
+2026-02-23 07:30:55 [ERROR] Schedule mark failed [kangoo1991]: could not find your fish
+2026-02-23 07:30:55 [INFO] FAILED [Rriba]: could not find your fish
+2026-02-23 07:30:55 [ERROR] Schedule mark failed [Rriba]: could not find your fish
+2026-02-23 07:30:55 [INFO] Activity feed connected
+2026-02-23 07:30:55 [INFO] Queue [bc0f]: Successfully built instruction for 'Mark 'GenaCrypto''
+2026-02-23 07:30:55 [INFO] Queue [bc0f]: Sleeping for 43821s before 'Mark 'GenaCrypto''...
+2026-02-23 07:30:55 [INFO] Queue [1892]: Successfully built instruction for 'Mark 'SHTYRMOVIK''
+2026-02-23 07:30:55 [INFO] Queue [1892]: Sleeping for 51530s before 'Mark 'SHTYRMOVIK''...
+2026-02-23 07:30:55 [INFO] Loaded 2 pending targets from cache (all wallets)
+2026-02-23 07:30:55 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 07:30:56 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:30:56 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:30:57 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:30:57 [INFO] FAILED [SHTYRMOVIK]: could not find your fish
+2026-02-23 07:30:57 [ERROR] Schedule mark failed [SHTYRMOVIK]: could not find your fish
+2026-02-23 07:30:57 [INFO] FAILED [GenaCrypto]: could not find your fish
+2026-02-23 07:30:57 [ERROR] Schedule mark failed [GenaCrypto]: could not find your fish
+2026-02-23 07:31:11 [INFO] Switched to wallet #2
+2026-02-23 07:31:11 [INFO] Backend ready
+2026-02-23 07:31:11 [INFO] Activity feed connected
+2026-02-23 07:31:11 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 07:31:12 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:31:12 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:31:13 [INFO] Switched to wallet #1
+2026-02-23 07:31:13 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:31:13 [INFO] Backend ready
+2026-02-23 07:31:13 [INFO] Activity feed connected
+2026-02-23 07:31:13 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 07:31:14 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:31:14 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:31:15 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:31:16 [INFO] Retry refresh after wallet switch
+2026-02-23 07:31:18 [INFO] Retry refresh after wallet switch
+2026-02-23 07:31:26 [INFO] Auto-refresh disabled
+2026-02-23 07:31:26 [INFO] Settings applied: CU limit=200000, priority fee=375000
+2026-02-23 07:31:26 [INFO] Backend ready
+2026-02-23 07:31:26 [INFO] CU updated: limit=200000, price=375000
+2026-02-23 07:31:26 [INFO] Activity feed connected
+2026-02-23 07:31:27 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 07:31:27 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:31:28 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:31:28 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:32:12 [INFO] Scheduler: fetching my fish...
+2026-02-23 07:32:12 [INFO] Scheduler: my fish 'dazay' ~0.5574 SOL (share=227997710)
+2026-02-23 07:32:12 [INFO] Scheduler: loading all fish...
+2026-02-23 07:32:12 [INFO] Scheduler: 1584 fish loaded
+2026-02-23 07:32:12 [INFO] Scheduler: filters — own=2 heavy=1208 <0.4SOL=257 marked=84 expired=0 → 33 candidates
+2026-02-23 07:32:12 [INFO] Scheduler: 5 targets found and sent to queue.
+2026-02-23 07:32:13 [INFO] Queue [1590]: Successfully built instruction for 'Mark 'Rriba''
+2026-02-23 07:32:13 [INFO] Queue [1590]: Sleeping for 59883s before 'Mark 'Rriba''...
+2026-02-23 07:32:13 [INFO] Queue [854c]: Successfully built instruction for 'Mark 'GenaCrypto''
+2026-02-23 07:32:13 [INFO] Queue [854c]: Sleeping for 43744s before 'Mark 'GenaCrypto''...
+2026-02-23 07:32:13 [INFO] Queue [6013]: Successfully built instruction for 'Mark 'SHTYRMOVIK''
+2026-02-23 07:32:13 [INFO] Queue [6013]: Sleeping for 51453s before 'Mark 'SHTYRMOVIK''...
+2026-02-23 07:32:13 [INFO] Queue [d905]: Successfully built instruction for 'Mark 'OkeanNbluXyu''
+2026-02-23 07:32:13 [INFO] Queue [d905]: Sleeping for 7116s before 'Mark 'OkeanNbluXyu''...
+2026-02-23 07:32:13 [INFO] Queue [e3b0]: Successfully built instruction for 'Mark 'kangoo1991''
+2026-02-23 07:32:13 [INFO] Queue [e3b0]: Sleeping for 44468s before 'Mark 'kangoo1991''...
+2026-02-23 07:32:16 [INFO] Priority fee: 375000 → 750000 (x2)
+2026-02-23 07:32:16 [INFO] Auto-refresh disabled
+2026-02-23 07:32:16 [INFO] Settings applied: CU limit=200000, priority fee=750000
+2026-02-23 07:32:16 [INFO] Settings saved to /home/dazay/Desktop/tools/hodlhuntSol/.env
+2026-02-23 07:32:16 [INFO] CU updated: limit=200000, price=750000
+2026-02-23 07:41:57 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 07:41:57 [INFO] Switched to wallet #2
+2026-02-23 07:41:57 [INFO] Backend ready
+2026-02-23 07:41:57 [INFO] FAILED [Rriba]: could not find your fish
+2026-02-23 07:41:57 [ERROR] Schedule mark failed [Rriba]: could not find your fish
+2026-02-23 07:41:57 [INFO] FAILED [OkeanNbluXyu]: could not find your fish
+2026-02-23 07:41:57 [ERROR] Schedule mark failed [OkeanNbluXyu]: could not find your fish
+2026-02-23 07:41:57 [INFO] FAILED [GenaCrypto]: could not find your fish
+2026-02-23 07:41:57 [ERROR] Schedule mark failed [GenaCrypto]: could not find your fish
+2026-02-23 07:41:58 [INFO] Activity feed connected
+2026-02-23 07:41:58 [INFO] Loaded 2 pending targets from cache (all wallets)
+2026-02-23 07:41:58 [INFO] Queue [a9cb]: Successfully built instruction for 'Mark 'kangoo1991''
+2026-02-23 07:41:58 [INFO] Queue [a9cb]: Sleeping for 43883s before 'Mark 'kangoo1991''...
+2026-02-23 07:41:58 [INFO] Queue [86fe]: Successfully built instruction for 'Mark 'SHTYRMOVIK''
+2026-02-23 07:41:58 [INFO] Queue [86fe]: Sleeping for 50868s before 'Mark 'SHTYRMOVIK''...
+2026-02-23 07:41:58 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 07:41:58 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:41:59 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:41:59 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:41:59 [INFO] FAILED [SHTYRMOVIK]: could not find your fish
+2026-02-23 07:41:59 [ERROR] Schedule mark failed [SHTYRMOVIK]: could not find your fish
+2026-02-23 07:41:59 [INFO] FAILED [kangoo1991]: could not find your fish
+2026-02-23 07:41:59 [ERROR] Schedule mark failed [kangoo1991]: could not find your fish
+2026-02-23 07:42:02 [INFO] Retry refresh after wallet switch
+2026-02-23 07:42:15 [INFO] Switched to wallet #1
+2026-02-23 07:42:15 [INFO] Backend ready
+2026-02-23 07:42:16 [INFO] Activity feed connected
+2026-02-23 07:42:16 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 07:42:16 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:42:17 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:42:17 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:42:21 [INFO] Retry refresh after wallet switch
+2026-02-23 07:42:30 [INFO] Switched to wallet #2
+2026-02-23 07:42:30 [INFO] Backend ready
+2026-02-23 07:42:30 [INFO] Activity feed connected
+2026-02-23 07:42:31 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 07:42:31 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:42:31 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:42:32 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:42:35 [INFO] Retry refresh after wallet switch
+2026-02-23 07:42:55 [INFO] [!] Couldn't find your Fish account
+2026-02-23 07:43:00 [INFO] [!] Couldn't find your Fish account
+2026-02-23 07:43:01 [INFO] [!] Couldn't find your Fish account
+2026-02-23 07:43:01 [INFO] [!] Couldn't find your Fish account
+2026-02-23 07:43:01 [INFO] [!] Couldn't find your Fish account
+2026-02-23 07:43:31 [INFO] Switched to wallet #1
+2026-02-23 07:43:31 [INFO] Backend ready
+2026-02-23 07:43:31 [INFO] Activity feed connected
+2026-02-23 07:43:32 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 07:43:32 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:43:33 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:43:33 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:43:37 [INFO] Retry refresh after wallet switch
+2026-02-23 07:43:56 [INFO] No failed/queued tasks to run for current wallet
+2026-02-23 07:43:56 [INFO] Queue cleared
+2026-02-23 07:44:01 [INFO] No failed/queued tasks to run for current wallet
+2026-02-23 07:44:07 [INFO] Queue cleared
+2026-02-23 07:44:08 [INFO] Queue cleared
+2026-02-23 07:44:10 [INFO] No failed/queued tasks to run for current wallet
+2026-02-23 07:44:22 [INFO] Auto-refresh disabled
+2026-02-23 07:44:22 [INFO] Settings applied: CU limit=200000, priority fee=750000
+2026-02-23 07:44:22 [INFO] Backend ready
+2026-02-23 07:44:22 [INFO] CU updated: limit=200000, price=750000
+2026-02-23 07:44:22 [INFO] Activity feed connected
+2026-02-23 07:44:23 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 07:44:23 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:44:24 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:44:24 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:44:38 [INFO] No failed/queued tasks to run for current wallet
+2026-02-23 07:44:39 [INFO] Queue cleared
+2026-02-23 07:45:27 [INFO] Switched to wallet #2
+2026-02-23 07:45:27 [INFO] Backend ready
+2026-02-23 07:45:27 [INFO] Activity feed connected
+2026-02-23 07:45:27 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 07:45:28 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:45:28 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:45:29 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:45:29 [INFO] Scheduler: fetching my fish...
+2026-02-23 07:45:30 [INFO] Scheduler: my fish 'FufelshmercPakostin' ~0.1710 SOL (share=69949735)
+2026-02-23 07:45:30 [INFO] Scheduler: loading all fish...
+2026-02-23 07:45:30 [INFO] Scheduler: 0 fish loaded
+2026-02-23 07:45:30 [INFO] Scheduler: filters — own=0 heavy=0 <0.4SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-23 07:45:30 [INFO] Scheduler: no schedulable prey found
+2026-02-23 07:45:32 [INFO] Retry refresh after wallet switch
+2026-02-23 07:45:33 [INFO] Switched to wallet #1
+2026-02-23 07:45:33 [INFO] Backend ready
+2026-02-23 07:45:33 [INFO] Activity feed connected
+2026-02-23 07:45:34 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 07:45:34 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:45:35 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:45:35 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:45:38 [INFO] Retry refresh after wallet switch
+2026-02-23 07:46:01 [INFO] No failed/queued tasks to run for current wallet
+2026-02-23 07:47:48 [INFO] Auto-refresh disabled
+2026-02-23 07:47:48 [INFO] Settings applied: CU limit=200000, priority fee=750000
+2026-02-23 07:47:48 [INFO] Backend ready
+2026-02-23 07:47:48 [INFO] CU updated: limit=200000, price=750000
+2026-02-23 07:47:48 [INFO] Activity feed connected
+2026-02-23 07:47:48 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 07:47:49 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:47:49 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:47:50 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:50:49 [INFO] Auto-refresh disabled
+2026-02-23 07:50:49 [INFO] Settings applied: CU limit=200000, priority fee=750000
+2026-02-23 07:50:49 [INFO] Backend ready
+2026-02-23 07:50:49 [INFO] CU updated: limit=200000, price=750000
+2026-02-23 07:50:49 [INFO] Activity feed connected
+2026-02-23 07:50:49 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 07:50:50 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 07:50:50 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 07:50:51 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 07:50:55 [INFO] Scheduler: fetching my fish...
+2026-02-23 07:50:55 [INFO] Scheduler: my fish 'dazay' ~0.5574 SOL (share=227997710)
+2026-02-23 07:50:55 [INFO] Scheduler: loading all fish...
+2026-02-23 07:50:55 [INFO] Scheduler: 0 fish loaded
+2026-02-23 07:50:55 [INFO] Scheduler: filters — own=0 heavy=0 <0.1SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-23 07:50:55 [INFO] Scheduler: no schedulable prey found
+2026-02-23 07:51:49 [INFO] Scheduler: fetching my fish...
+2026-02-23 07:51:49 [INFO] Scheduler: my fish 'dazay' ~0.5574 SOL (share=227997710)
+2026-02-23 07:51:49 [INFO] Scheduler: loading all fish...
+2026-02-23 07:51:49 [INFO] Scheduler: 1586 fish loaded
+2026-02-23 07:51:49 [INFO] Scheduler: filters — own=2 heavy=1208 <0.4SOL=260 marked=83 expired=0 → 33 candidates
+2026-02-23 07:51:49 [INFO] Scheduler: 5 targets found and sent to queue.
+2026-02-23 07:51:50 [INFO] Queue [ffb9]: Successfully built instruction for 'Mark 'GenaCrypto''
+2026-02-23 07:51:50 [INFO] Queue [ffb9]: Sleeping for 42567s before 'Mark 'GenaCrypto''...
+2026-02-23 07:51:50 [INFO] Queue [5d58]: Successfully built instruction for 'Mark 'OkeanNbluXyu''
+2026-02-23 07:51:50 [INFO] Queue [5d58]: Sleeping for 5939s before 'Mark 'OkeanNbluXyu''...
+2026-02-23 07:51:50 [INFO] Queue [a2d5]: Successfully built instruction for 'Mark 'SHTYRMOVIK''
+2026-02-23 07:51:50 [INFO] Queue [a2d5]: Sleeping for 50276s before 'Mark 'SHTYRMOVIK''...
+2026-02-23 07:51:50 [INFO] Queue [649f]: Successfully built instruction for 'Mark 'Rriba''
+2026-02-23 07:51:50 [INFO] Queue [649f]: Sleeping for 58706s before 'Mark 'Rriba''...
+2026-02-23 07:51:50 [INFO] Queue [a459]: Successfully built instruction for 'Mark 'kangoo1991''
+2026-02-23 07:51:50 [INFO] Queue [a459]: Sleeping for 43291s before 'Mark 'kangoo1991''...
+2026-02-23 08:42:33 [INFO] Priority fee: 750000 → 1500000 (x2)
+2026-02-23 08:42:33 [INFO] Auto-refresh disabled
+2026-02-23 08:42:33 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 08:42:33 [INFO] Settings saved to /home/dazay/Desktop/tools/hodlhuntSol/.env
+2026-02-23 08:42:33 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 09:30:49 [INFO] Sending [OkeanNbluXyu]...
+2026-02-23 09:30:49 [INFO] Queue [5d58]: Timer expired, fetching blockhash & sending 'Mark 'OkeanNbluXyu''...
+2026-02-23 09:30:49 [INFO] [+] Mark 'OkeanNbluXyu' sent: 5xj2BosHNsvQBm55UWSJHxiVYcBvRpWnHHTEnKLjqRMsytm3Ntr9ZASKj4uBJxErbpBYfrR57DWBM6aqyzycfHwm
+2026-02-23 09:30:54 [INFO] FAILED [OkeanNbluXyu]: 
+2026-02-23 09:30:54 [ERROR] Schedule mark failed [OkeanNbluXyu]: 
+2026-02-23 09:30:54 [INFO] Queue [5d58]: Error sending 'Mark 'OkeanNbluXyu'' -> 
+2026-02-23 09:45:16 [INFO] Loaded 4 pending targets from cache (all wallets)
+2026-02-23 09:45:16 [INFO] Switched to wallet #2
+2026-02-23 09:45:16 [INFO] Backend ready
+2026-02-23 09:45:16 [INFO] FAILED [kangoo1991]: could not find your fish
+2026-02-23 09:45:16 [ERROR] Schedule mark failed [kangoo1991]: could not find your fish
+2026-02-23 09:45:16 [INFO] FAILED [Rriba]: could not find your fish
+2026-02-23 09:45:16 [ERROR] Schedule mark failed [Rriba]: could not find your fish
+2026-02-23 09:45:16 [INFO] Activity feed connected
+2026-02-23 09:45:16 [INFO] Queue [5f55]: Successfully built instruction for 'Mark 'SHTYRMOVIK''
+2026-02-23 09:45:16 [INFO] Queue [5f55]: Sleeping for 43469s before 'Mark 'SHTYRMOVIK''...
+2026-02-23 09:45:16 [INFO] Queue [85bb]: Successfully built instruction for 'Mark 'GenaCrypto''
+2026-02-23 09:45:16 [INFO] Queue [85bb]: Sleeping for 35760s before 'Mark 'GenaCrypto''...
+2026-02-23 09:45:16 [INFO] Loaded 2 pending targets from cache (all wallets)
+2026-02-23 09:45:16 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 09:45:17 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 09:45:17 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 09:45:18 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 09:45:18 [INFO] FAILED [GenaCrypto]: could not find your fish
+2026-02-23 09:45:18 [ERROR] Schedule mark failed [GenaCrypto]: could not find your fish
+2026-02-23 09:45:18 [INFO] FAILED [SHTYRMOVIK]: could not find your fish
+2026-02-23 09:45:18 [ERROR] Schedule mark failed [SHTYRMOVIK]: could not find your fish
+2026-02-23 09:45:19 [INFO] Switched to wallet #1
+2026-02-23 09:45:19 [INFO] Backend ready
+2026-02-23 09:45:19 [INFO] Activity feed connected
+2026-02-23 09:45:19 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 09:45:20 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 09:45:20 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 09:45:21 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 09:45:21 [INFO] Retry refresh after wallet switch
+2026-02-23 09:45:24 [INFO] Retry refresh after wallet switch
+2026-02-23 09:45:42 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 09:45:43 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 09:45:43 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 09:47:40 [INFO] Switched to wallet #2
+2026-02-23 09:47:40 [INFO] Backend ready
+2026-02-23 09:47:40 [INFO] Activity feed connected
+2026-02-23 09:47:41 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 09:47:41 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 09:47:42 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 09:47:42 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 09:47:45 [INFO] Retry refresh after wallet switch
+2026-02-23 09:47:48 [INFO] Switched to wallet #1
+2026-02-23 09:47:49 [INFO] Backend ready
+2026-02-23 09:47:49 [INFO] Activity feed connected
+2026-02-23 09:47:49 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 09:47:50 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 09:47:50 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 09:47:51 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 09:47:54 [INFO] Retry refresh after wallet switch
+2026-02-23 10:07:41 [INFO] Auto-refresh disabled
+2026-02-23 10:07:41 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 10:07:41 [INFO] Backend ready
+2026-02-23 10:07:41 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 10:07:41 [INFO] Activity feed connected
+2026-02-23 10:07:42 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 10:07:42 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 10:07:43 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 10:07:43 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 10:08:03 [INFO] Scheduler: fetching my fish...
+2026-02-23 10:08:03 [INFO] Scheduler: my fish 'dazay' ~0.5576 SOL (share=227997710)
+2026-02-23 10:08:03 [INFO] Scheduler: loading all fish...
+2026-02-23 10:08:03 [INFO] Scheduler: 1588 fish loaded
+2026-02-23 10:08:03 [INFO] Scheduler: filters — own=2 heavy=1210 <0.4SOL=261 marked=83 expired=0 → 32 candidates
+2026-02-23 10:08:03 [INFO] Scheduler: 5 targets found and sent to queue.
+2026-02-23 10:08:04 [INFO] Queue [ebe9]: Successfully built instruction for 'Mark 'SHTYRMOVIK''
+2026-02-23 10:08:04 [INFO] Queue [ebe9]: Sleeping for 42102s before 'Mark 'SHTYRMOVIK''...
+2026-02-23 10:08:04 [INFO] Queue [a686]: Successfully built instruction for 'Mark 'kangoo1991''
+2026-02-23 10:08:04 [INFO] Queue [a686]: Sleeping for 35117s before 'Mark 'kangoo1991''...
+2026-02-23 10:08:04 [INFO] Queue [e7c6]: Successfully built instruction for 'Mark 'GenaCrypto''
+2026-02-23 10:08:04 [INFO] Queue [e7c6]: Sleeping for 34393s before 'Mark 'GenaCrypto''...
+2026-02-23 10:08:04 [INFO] Queue [5a26]: Successfully built instruction for 'Mark 'Vaska''
+2026-02-23 10:08:04 [INFO] Queue [5a26]: Sleeping for 50572s before 'Mark 'Vaska''...
+2026-02-23 10:08:04 [INFO] Queue [e4bc]: Successfully built instruction for 'Mark 'Rriba''
+2026-02-23 10:08:04 [INFO] Queue [e4bc]: Sleeping for 50532s before 'Mark 'Rriba''...
+2026-02-23 10:11:44 [INFO] Auto-refresh disabled
+2026-02-23 10:11:44 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 10:11:44 [INFO] Backend ready
+2026-02-23 10:11:44 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 10:11:44 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 10:11:44 [INFO] Activity feed connected
+2026-02-23 10:11:44 [INFO] Queue [043c]: Successfully built instruction for 'Mark 'Rriba''
+2026-02-23 10:11:44 [INFO] Queue [043c]: Sleeping for 50311s before 'Mark 'Rriba''...
+2026-02-23 10:11:44 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 10:11:44 [INFO] Queue [cb91]: Successfully built instruction for 'Mark 'GenaCrypto''
+2026-02-23 10:11:44 [INFO] Queue [cb91]: Sleeping for 34172s before 'Mark 'GenaCrypto''...
+2026-02-23 10:11:45 [INFO] Queue [040e]: Successfully built instruction for 'Mark 'SHTYRMOVIK''
+2026-02-23 10:11:45 [INFO] Queue [040e]: Sleeping for 41881s before 'Mark 'SHTYRMOVIK''...
+2026-02-23 10:11:45 [INFO] Queue [4405]: Successfully built instruction for 'Mark 'kangoo1991''
+2026-02-23 10:11:45 [INFO] Queue [4405]: Sleeping for 34896s before 'Mark 'kangoo1991''...
+2026-02-23 10:11:45 [INFO] Queue [3621]: Successfully built instruction for 'Mark 'Vaska''
+2026-02-23 10:11:45 [INFO] Queue [3621]: Sleeping for 50351s before 'Mark 'Vaska''...
+2026-02-23 10:11:45 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 10:11:45 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 10:11:46 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 10:11:46 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 10:11:47 [INFO] FAILED [Vaska]: could not find your fish
+2026-02-23 10:11:47 [ERROR] Schedule mark failed [Vaska]: could not find your fish
+2026-02-23 10:11:47 [INFO] FAILED [kangoo1991]: could not find your fish
+2026-02-23 10:11:47 [ERROR] Schedule mark failed [kangoo1991]: could not find your fish
+2026-02-23 10:11:47 [INFO] FAILED [GenaCrypto]: could not find your fish
+2026-02-23 10:11:47 [ERROR] Schedule mark failed [GenaCrypto]: could not find your fish
+2026-02-23 10:11:47 [INFO] [!] Couldn't find your Fish account
+2026-02-23 10:11:47 [INFO] FAILED [Rriba]: could not build instruction
+2026-02-23 10:11:47 [ERROR] Schedule mark failed [Rriba]: could not build instruction
+2026-02-23 10:11:47 [INFO] Queue [c3a5]: Failed to build instruction for Mark 'Rriba'
+2026-02-23 10:11:47 [INFO] [!] Couldn't find your Fish account
+2026-02-23 10:11:47 [INFO] FAILED [SHTYRMOVIK]: could not build instruction
+2026-02-23 10:11:47 [ERROR] Schedule mark failed [SHTYRMOVIK]: could not build instruction
+2026-02-23 10:11:47 [INFO] Queue [ea28]: Failed to build instruction for Mark 'SHTYRMOVIK'
+2026-02-23 10:16:31 [INFO] Auto-refresh disabled
+2026-02-23 10:16:31 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 10:16:31 [INFO] Backend ready
+2026-02-23 10:16:31 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 10:16:31 [INFO] Activity feed connected
+2026-02-23 10:16:32 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 10:16:32 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 10:16:33 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 10:16:33 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 10:16:40 [INFO] Scheduler: fetching my fish...
+2026-02-23 10:16:40 [INFO] Scheduler: my fish 'dazay' ~0.5576 SOL (share=227997710)
+2026-02-23 10:16:40 [INFO] Scheduler: loading all fish...
+2026-02-23 10:16:40 [INFO] Scheduler: 0 fish loaded
+2026-02-23 10:16:40 [INFO] Scheduler: filters — own=0 heavy=0 <0.4SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-23 10:16:40 [INFO] Scheduler: no schedulable prey found
+2026-02-23 10:16:58 [INFO] Scheduler: fetching my fish...
+2026-02-23 10:16:59 [INFO] Scheduler: my fish 'dazay' ~0.5576 SOL (share=227997710)
+2026-02-23 10:16:59 [INFO] Scheduler: loading all fish...
+2026-02-23 10:16:59 [INFO] Scheduler: 0 fish loaded
+2026-02-23 10:16:59 [INFO] Scheduler: filters — own=0 heavy=0 <0.4SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-23 10:16:59 [INFO] Scheduler: no schedulable prey found
+2026-02-23 10:17:02 [INFO] Scheduler: fetching my fish...
+2026-02-23 10:17:02 [INFO] Scheduler: my fish 'dazay' ~0.5576 SOL (share=227997710)
+2026-02-23 10:17:02 [INFO] Scheduler: loading all fish...
+2026-02-23 10:17:02 [INFO] Scheduler: 0 fish loaded
+2026-02-23 10:17:02 [INFO] Scheduler: filters — own=0 heavy=0 <0.4SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-23 10:17:02 [INFO] Scheduler: no schedulable prey found
+2026-02-23 10:17:14 [INFO] Scheduler: fetching my fish...
+2026-02-23 10:17:15 [INFO] Scheduler: my fish 'dazay' ~0.5576 SOL (share=227997710)
+2026-02-23 10:17:15 [INFO] Scheduler: loading all fish...
+2026-02-23 10:17:15 [INFO] Scheduler: 0 fish loaded
+2026-02-23 10:17:15 [INFO] Scheduler: filters — own=0 heavy=0 <0.4SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-23 10:17:15 [INFO] Scheduler: no schedulable prey found
+2026-02-23 10:17:22 [INFO] Scheduler: fetching my fish...
+2026-02-23 10:17:22 [INFO] Scheduler: my fish 'dazay' ~0.5576 SOL (share=227997710)
+2026-02-23 10:17:22 [INFO] Scheduler: loading all fish...
+2026-02-23 10:17:22 [INFO] Scheduler: 0 fish loaded
+2026-02-23 10:17:22 [INFO] Scheduler: filters — own=0 heavy=0 <0.4SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-23 10:17:22 [INFO] Scheduler: no schedulable prey found
+2026-02-23 10:17:23 [INFO] Scheduler: fetching my fish...
+2026-02-23 10:17:23 [INFO] Scheduler: my fish 'dazay' ~0.5576 SOL (share=227997710)
+2026-02-23 10:17:23 [INFO] Scheduler: loading all fish...
+2026-02-23 10:17:23 [INFO] Scheduler: 0 fish loaded
+2026-02-23 10:17:23 [INFO] Scheduler: filters — own=0 heavy=0 <0.4SOL=0 marked=0 expired=0 → 0 candidates
+2026-02-23 10:17:23 [INFO] Scheduler: no schedulable prey found
+2026-02-23 10:18:17 [INFO] Queued MARK for 'BabyDi' (wallet #1)
+2026-02-23 10:18:18 [INFO] Queue [c690]: Successfully built instruction for 'Mark 'BabyDi''
+2026-02-23 10:18:18 [INFO] Queue [c690]: Sleeping for 374517s before 'Mark 'BabyDi''...
+2026-02-23 10:20:19 [INFO] Scheduler: fetching my fish...
+2026-02-23 10:20:19 [INFO] Scheduler: my fish 'dazay' ~0.5576 SOL (share=227997710)
+2026-02-23 10:20:19 [INFO] Scheduler: loading all fish...
+2026-02-23 10:20:20 [INFO] Scheduler: 1588 fish loaded
+2026-02-23 10:20:20 [INFO] Scheduler: filters — own=2 heavy=1210 <0.4SOL=262 marked=82 expired=0 → 32 candidates
+2026-02-23 10:20:20 [INFO] Scheduler: 5 targets found and sent to queue.
+2026-02-23 10:20:20 [INFO] Queue [5679]: Successfully built instruction for 'Mark 'kangoo1991''
+2026-02-23 10:20:20 [INFO] Queue [5679]: Sleeping for 34381s before 'Mark 'kangoo1991''...
+2026-02-23 10:20:20 [INFO] Queue [ee70]: Successfully built instruction for 'Mark 'SHTYRMOVIK''
+2026-02-23 10:20:20 [INFO] Queue [ee70]: Sleeping for 41366s before 'Mark 'SHTYRMOVIK''...
+2026-02-23 10:20:20 [INFO] Queue [f188]: Successfully built instruction for 'Mark 'Vaska''
+2026-02-23 10:20:20 [INFO] Queue [f188]: Sleeping for 49836s before 'Mark 'Vaska''...
+2026-02-23 10:20:20 [INFO] Queue [37d8]: Successfully built instruction for 'Mark 'GenaCrypto''
+2026-02-23 10:20:20 [INFO] Queue [37d8]: Sleeping for 33657s before 'Mark 'GenaCrypto''...
+2026-02-23 10:20:20 [INFO] Queue [bbc5]: Successfully built instruction for 'Mark 'Rriba''
+2026-02-23 10:20:20 [INFO] Queue [bbc5]: Sleeping for 49796s before 'Mark 'Rriba''...
+2026-02-23 11:59:18 [INFO] Auto-refresh disabled
+2026-02-23 11:59:18 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 11:59:18 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 11:59:18 [INFO] Backend ready
+2026-02-23 11:59:18 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 11:59:18 [INFO] Activity feed connected
+2026-02-23 11:59:19 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 11:59:19 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 11:59:19 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 11:59:20 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 11:59:20 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 11:59:23 [INFO] Switched to wallet #2
+2026-02-23 11:59:23 [INFO] Backend ready
+2026-02-23 11:59:23 [INFO] Activity feed connected
+2026-02-23 11:59:23 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 11:59:23 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 11:59:24 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 11:59:24 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 11:59:25 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 11:59:27 [INFO] Retry refresh after wallet switch
+2026-02-23 12:00:46 [INFO] [+] ExitGame sent: 4eri8pYGRz6UZSfbjDkkhH7Qt6Qx3gJvsVLy1nSBxWNmBW5TkVdLZdT2mt7VBrgDSpw1oMEttjuMD1W8GZpdDwLb
+2026-02-23 12:00:51 [INFO] [!] RPC rate limit (429) — tx sent, check solscan.io/tx/4eri8pYGRz6UZSfb...
+2026-02-23 13:02:58 [INFO] Auto-refresh disabled
+2026-02-23 13:02:58 [INFO] Settings applied: CU limit=50000, priority fee=1500000
+2026-02-23 13:02:58 [INFO] CU updated: limit=50000, price=1500000
+2026-02-23 13:03:24 [INFO] Auto-refresh disabled
+2026-02-23 13:03:24 [INFO] Settings applied: CU limit=50000, priority fee=750000
+2026-02-23 13:03:24 [INFO] CU updated: limit=50000, price=750000
+2026-02-23 13:03:43 [INFO] Switched to wallet #1
+2026-02-23 13:03:43 [INFO] Backend ready
+2026-02-23 13:03:43 [INFO] Activity feed connected
+2026-02-23 13:03:44 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 13:03:44 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 13:03:44 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 13:03:45 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 13:03:45 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 13:03:47 [INFO] Switched to wallet #2
+2026-02-23 13:03:47 [INFO] Backend ready
+2026-02-23 13:03:47 [INFO] Activity feed connected
+2026-02-23 13:03:47 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 13:03:47 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 13:03:48 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 13:03:48 [INFO] Retry refresh after wallet switch
+2026-02-23 13:03:48 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 13:03:49 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 13:03:52 [INFO] Retry refresh after wallet switch
+2026-02-23 13:04:10 [INFO] Switched to wallet #1
+2026-02-23 13:04:10 [INFO] Backend ready
+2026-02-23 13:04:10 [INFO] Activity feed connected
+2026-02-23 13:04:11 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 13:04:11 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 13:04:12 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 13:04:12 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 13:04:13 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 13:04:15 [INFO] Retry refresh after wallet switch
+2026-02-23 13:04:29 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 13:05:10 [INFO] Auto-refresh disabled
+2026-02-23 13:05:10 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 13:05:10 [INFO] Backend ready
+2026-02-23 13:05:10 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 13:05:10 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 13:05:10 [INFO] Activity feed connected
+2026-02-23 13:05:10 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 13:05:10 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 13:05:11 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 13:05:11 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 13:05:12 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 13:05:24 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 13:05:24 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 13:05:24 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 13:05:24 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 13:05:25 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 13:05:25 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 13:05:25 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 13:05:25 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 13:05:26 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 13:20:57 [INFO] Auto-refresh disabled
+2026-02-23 13:20:57 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 13:20:57 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 13:20:57 [INFO] Backend ready
+2026-02-23 13:20:57 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 13:20:57 [INFO] Activity feed connected
+2026-02-23 13:20:57 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 13:20:58 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 13:20:58 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 13:20:59 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 13:20:59 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 13:21:52 [INFO] Auto-refresh disabled
+2026-02-23 13:21:52 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 13:21:52 [INFO] Backend ready
+2026-02-23 13:21:52 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 13:21:52 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 13:21:53 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 13:21:53 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 13:21:53 [INFO] Activity feed connected
+2026-02-23 13:21:53 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 13:21:54 [INFO] Preload wallet #3: 0 fish, actual_fish_ids []
+2026-02-23 13:21:54 [INFO] Preload wallet #4: 0 fish, actual_fish_ids []
+2026-02-23 13:25:25 [INFO] [+] HuntFish sent: 2wtRoNRTQz8FHxrvarrn95M48V3CRWv7w5BnL6Q95j24LRBBfnPMhRX5bdVvbFUwK6mKNYma7egnUfUViFdz8ycC
+2026-02-23 13:25:30 [INFO] [!] RPC rate limit (429) — tx sent, check solscan.io/tx/2wtRoNRTQz8FHxrv...
+2026-02-23 13:26:37 [INFO] [+] PlaceHuntingMark sent: 4CqM2TSSuZXtXpkpE2MJpyWd15Sojp1TF8L4v4xjPNAexzdVz4BsHqrDWaKFN1XvEpQAWwug2CAn1BZiobNeKvkF
+2026-02-23 13:26:42 [INFO] [!] RPC rate limit (429) — tx sent, check solscan.io/tx/4CqM2TSSuZXtXpkp...
+2026-02-23 13:54:08 [INFO] Sending 0.0100 SOL donation...
+2026-02-23 13:54:08 [ERROR] Donate: argument 'params': Unable to convert key: lamports. Error: TypeError: 'float' object cannot be interpreted as an integer
+2026-02-23 14:05:31 [INFO] Auto-refresh disabled
+2026-02-23 14:05:31 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 14:05:31 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 14:05:31 [INFO] Backend ready
+2026-02-23 14:05:31 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 14:05:32 [INFO] Activity feed connected
+2026-02-23 14:05:32 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 14:05:32 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 14:05:32 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 14:05:41 [INFO] Sending 0.0100 SOL donation...
+2026-02-23 14:05:41 [ERROR] Donate: SendTransactionPreflightFailureMessage { message: "Transaction simulation failed: Error processing Instruction 0: custom program error: 0x1", data: RpcSimulateTransactionResult(RpcSimulateTransactionResult { err: Some(InstructionError(0, Custom(1))), logs: Some(["Program 11111111111111111111111111111111 invoke [1]", "Transfer: insufficient lamports 201925983, need 10000000000000000", "Program 11111111111111111111111111111111 failed: custom program error: 0x1"]), accounts: None, units_consumed: Some(150), return_data: None, inner_instructions: None, replacement_blockhash: None }) }
+2026-02-23 14:06:30 [INFO] Switched to wallet #2
+2026-02-23 14:06:30 [INFO] Backend ready
+2026-02-23 14:06:30 [INFO] Activity feed connected
+2026-02-23 14:06:30 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 14:06:30 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 14:06:31 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 14:06:34 [INFO] Retry refresh after wallet switch
+2026-02-23 14:06:50 [INFO] Auto-refresh disabled
+2026-02-23 14:06:50 [INFO] Settings applied: CU limit=200000, priority fee=150000
+2026-02-23 14:06:51 [INFO] CU updated: limit=200000, price=150000
+2026-02-23 14:07:02 [INFO] Switched to wallet #1
+2026-02-23 14:07:02 [INFO] Backend ready
+2026-02-23 14:07:02 [INFO] Activity feed connected
+2026-02-23 14:07:03 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 14:07:03 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 14:07:04 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 14:07:06 [INFO] Retry refresh after wallet switch
+2026-02-23 14:07:20 [INFO] Sending 0.0100 SOL donation...
+2026-02-23 14:07:20 [ERROR] Donate: SendTransactionPreflightFailureMessage { message: "Transaction simulation failed: Error processing Instruction 0: custom program error: 0x1", data: RpcSimulateTransactionResult(RpcSimulateTransactionResult { err: Some(InstructionError(0, Custom(1))), logs: Some(["Program 11111111111111111111111111111111 invoke [1]", "Transfer: insufficient lamports 201925983, need 10000000000000000", "Program 11111111111111111111111111111111 failed: custom program error: 0x1"]), accounts: None, units_consumed: Some(150), return_data: None, inner_instructions: None, replacement_blockhash: None }) }
+2026-02-23 14:09:24 [INFO] Auto-refresh disabled
+2026-02-23 14:09:24 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 14:09:25 [INFO] Backend ready
+2026-02-23 14:09:25 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 14:09:25 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 14:09:25 [INFO] Activity feed connected
+2026-02-23 14:09:25 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 14:09:26 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 14:09:26 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 14:09:31 [INFO] Sending 0.0100 SOL donation...
+2026-02-23 14:09:31 [INFO] [+] Transfer 0.0100 SOL sent: 5KHXW4hNXdAhsbiGGi3cBL8jqkuMBqygjN9UfnkTpJw7jnxp6Z4WiNp1SsW7cToA2VfQn5Wyq5ZwKLMn7a6Q6jt1
+2026-02-23 14:09:36 [INFO] [!] RPC rate limit (429) — tx sent, check solscan.io/tx/5KHXW4hNXdAhsbiG...
+2026-02-23 14:09:36 [INFO] Donate sent: 5KHXW4hNXdAhsbiGGi3cBL8jqkuMBqygjN9UfnkTpJw7jnxp6Z4WiNp1SsW7cToA2VfQn5Wyq5ZwKLMn7a6Q6jt1
+2026-02-23 14:15:57 [INFO] Auto-refresh disabled
+2026-02-23 14:15:57 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 14:15:57 [INFO] Backend ready
+2026-02-23 14:15:57 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 14:15:57 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 14:15:57 [INFO] Activity feed connected
+2026-02-23 14:15:57 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 14:15:57 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 14:15:58 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 14:16:16 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 14:16:26 [INFO] [+] PlaceHuntingMark sent: 3Qd97VkNFM4hBzYv5GBrjdVTc5Z3mx8eqzpwgeM39CFy5BQD5os4KA7aC2Ut5bmQH1ZrVLNP6bkTbABYBj3hAKJ2
+2026-02-23 14:16:31 [INFO] [!] RPC rate limit (429) — tx sent, check solscan.io/tx/3Qd97VkNFM4hBzYv...
+2026-02-23 14:21:01 [INFO] Auto-refresh disabled
+2026-02-23 14:21:01 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 14:21:01 [INFO] Backend ready
+2026-02-23 14:21:01 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 14:21:02 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 14:21:02 [INFO] Activity feed connected
+2026-02-23 14:21:02 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 14:21:02 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 14:21:03 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 14:21:24 [INFO] [+] PlaceHuntingMark sent: 23HqCUjfcaHY6EZpwfgnMokdMjLKMmWBbGtcvSkWXjxJbzS2XPzRtTfaU2LEiiYxQem8vJLMWSPSHyBbmrJ1n1KE
+2026-02-23 14:21:29 [INFO] [!] RPC rate limit (429) — tx sent, check solscan.io/tx/23HqCUjfcaHY6EZp...
+2026-02-23 15:08:34 [INFO] Auto-refresh disabled
+2026-02-23 15:08:34 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 15:08:34 [INFO] Backend ready
+2026-02-23 15:08:34 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 15:08:35 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 15:08:35 [INFO] Activity feed connected
+2026-02-23 15:08:35 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 15:08:35 [INFO] Preload wallet #1: 2 fish, actual_fish_ids [1151, 1576]
+2026-02-23 15:08:36 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 15:19:25 [INFO] Activity WS reconnect: no close frame received or sent
+2026-02-23 15:19:30 [INFO] Activity feed connected
+2026-02-23 15:56:53 [INFO] Switched to wallet #1
+2026-02-23 15:56:53 [INFO] Wallets saved: 2
+2026-02-23 15:56:53 [INFO] Backend ready
+2026-02-23 15:56:53 [INFO] Activity feed connected
+2026-02-23 15:56:53 [INFO] Loaded 5 pending targets from cache (all wallets)
+2026-02-23 15:56:53 [INFO] Preload wallet #1: 1 fish, actual_fish_ids [1590]
+2026-02-23 15:56:54 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 15:56:54 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 15:56:55 [INFO] Preload wallet #2: 0 fish, actual_fish_ids []
+2026-02-23 15:56:57 [INFO] Retry refresh after wallet switch
+2026-02-23 15:57:40 [INFO] Queue cleared
+2026-02-23 15:57:49 [INFO] Scheduler: fetching my fish...
+2026-02-23 15:57:50 [INFO] Scheduler: my fish 'dazay2' ~0.2500 SOL (share=101949859)
+2026-02-23 15:57:50 [INFO] Scheduler: loading all fish...
+2026-02-23 15:57:50 [INFO] Scheduler: 1590 fish loaded
+2026-02-23 15:57:50 [INFO] Scheduler: filters — own=1 heavy=1318 <0.15SOL=131 marked=80 expired=0 → 60 candidates
+2026-02-23 15:57:50 [INFO] Scheduler: 5 targets found and sent to queue.
+2026-02-23 15:57:51 [INFO] Queue [c6dc]: Successfully built instruction for 'Mark 'Fax4''
+2026-02-23 15:57:51 [INFO] Queue [c6dc]: Sleeping for 62717s before 'Mark 'Fax4''...
+2026-02-23 15:57:51 [INFO] Queue [539f]: Successfully built instruction for 'Mark 'Alex1iz1blX''
+2026-02-23 15:57:51 [INFO] Queue [539f]: Sleeping for 18503s before 'Mark 'Alex1iz1blX''...
+2026-02-23 15:57:51 [INFO] Queue [1d27]: Successfully built instruction for 'Mark 'OLEG''
+2026-02-23 15:57:51 [INFO] Queue [1d27]: Sleeping for 66050s before 'Mark 'OLEG''...
+2026-02-23 15:57:51 [INFO] Queue [d1e2]: Successfully built instruction for 'Mark 'Margoth''
+2026-02-23 15:57:51 [INFO] Queue [d1e2]: Sleeping for 66494s before 'Mark 'Margoth''...
+2026-02-23 15:57:51 [INFO] Queue [1b6e]: Successfully built instruction for 'Mark 'SosniHuica''
+2026-02-23 15:57:51 [INFO] Queue [1b6e]: Sleeping for 16891s before 'Mark 'SosniHuica''...
+2026-02-23 15:58:02 [INFO] No failed/queued tasks to run for current wallet
+2026-02-23 15:58:08 [INFO] Queue cleared
+2026-02-23 16:14:21 [INFO] Switched to wallet #1
+2026-02-23 16:14:21 [INFO] Wallets saved: 1
+2026-02-23 16:14:21 [INFO] Backend ready
+2026-02-23 16:14:22 [INFO] Preload wallet #1: 1 fish, actual_fish_ids [1590]
+2026-02-23 16:14:22 [INFO] Activity feed connected
+2026-02-23 16:14:23 [INFO] Preload wallet #1: 0 fish, actual_fish_ids []
+2026-02-23 16:14:26 [INFO] Retry refresh after wallet switch
+2026-02-23 16:14:36 [INFO] 💡 Сначала загрузите рыб: Fish List → Load All Fish
+2026-02-23 16:15:17 [INFO] Сначала выбери рыбу
+2026-02-23 16:15:18 [INFO] Сначала выбери рыбу
+2026-02-23 16:15:18 [INFO] Сначала выбери рыбу
+2026-02-23 16:15:18 [INFO] Сначала выбери рыбу
+2026-02-23 16:15:19 [INFO] Сначала выбери рыбу
+2026-02-23 22:23:06 [INFO] Auto-refresh disabled
+2026-02-23 22:23:06 [INFO] Settings applied: CU limit=200000, priority fee=1500000
+2026-02-23 22:23:06 [INFO] Backend ready
+2026-02-23 22:23:06 [INFO] CU updated: limit=200000, price=1500000
+2026-02-23 22:23:06 [INFO] Activity feed connected
+2026-02-23 22:23:07 [INFO] Preload wallet #1: 1 fish, actual_fish_ids [1590]

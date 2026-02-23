@@ -2,6 +2,7 @@
 import os
 import json
 import logging
+import time
 from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -27,6 +28,38 @@ def all_sched_cache_paths(wallets_count: int) -> list[tuple[int, str]]:
 
 
 SCHEDULE_TRANSACTIONS_PATH = os.path.join(BASE_DIR, "schedule.transactions")
+HUNTER_MARK_PATH = os.path.join(BASE_DIR, "hunter_mark.json")
+
+
+def append_hunter_mark(entry: dict) -> None:
+    """Append a marked fish to hunter_mark.json. entry: owner, fish_id, name, share?, placed_at?, sig?."""
+    entry = dict(entry)
+    if "placed_at" not in entry:
+        entry["placed_at"] = int(time.time())
+    try:
+        data = []
+        if os.path.exists(HUNTER_MARK_PATH):
+            with open(HUNTER_MARK_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        key = (entry.get("owner", ""), entry.get("fish_id", 0))
+        data = [e for e in data if (e.get("owner"), e.get("fish_id")) != key]
+        data.append(entry)
+        with open(HUNTER_MARK_PATH, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        file_logger.warning(f"append_hunter_mark failed: {e}")
+
+
+def load_hunter_marks() -> list[dict]:
+    """Load marked fish from hunter_mark.json."""
+    if not os.path.exists(HUNTER_MARK_PATH):
+        return []
+    try:
+        with open(HUNTER_MARK_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        file_logger.warning(f"load_hunter_marks failed: {e}")
+        return []
 
 
 def load_wallets_config() -> tuple[list[str], int]:

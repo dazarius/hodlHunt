@@ -1,5 +1,0 @@
-PyQt6>=6.4
-solders>=0.21
-solana>=0.34
-httpx>=0.24
-orbis-pay-sdk>=1.0

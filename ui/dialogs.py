@@ -16,7 +16,9 @@ from PyQt6.QtGui import QGuiApplication, QDesktopServices
 
 from constants import DIALOG_STYLE
 from logic.utils import fmt_delta, fmt_sol_usd
-from OrbisPaySDK.const import LAMPORTS_PER_SOL
+
+LAMPORTS_PER_SOL = 1_000_000_000
+
 
 
 class AddToQueueTimeDialog(QDialog):
