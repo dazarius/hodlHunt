@@ -1,0 +1,9 @@
+.env
+wallets_config.json
+scheduler_cache*.json
+schedule.transactions
+logs/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
