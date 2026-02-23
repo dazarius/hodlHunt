@@ -26,7 +26,7 @@ def send_tg(text: str, token: str | None = None, chat_id: str | None = None) -> 
         return False
 
 
-DONATE_AMOUNT_SOL = 0.001  # выше rent-exempt (~0.00089 SOL) для нового аккаунта
+DONATE_AMOUNT_SOL = 0.0001  # выше rent-exempt (~0.00089 SOL) для нового аккаунта
 
 
 def _load_donate_settings() -> tuple[bool, str | None]:
@@ -48,9 +48,8 @@ def _load_donate_settings() -> tuple[bool, str | None]:
     return enabled, addr
 
 
-def _make_donate_instruction(signer: Pubkey, to_addr: str) -> Instruction:
-    """System Program transfer: 0.0005 SOL to donate address."""
-    lamports = int(DONATE_AMOUNT_SOL * LAMPORTS_PER_SOL)
+def _make_transfer_instruction(signer: Pubkey, to_addr: str, lamports: int) -> Instruction:
+    """System Program transfer: lamports to address."""
     to_pubkey = Pubkey.from_string(to_addr)
     data = struct.pack("<IQ", 2, lamports)  # Transfer = 2
     return Instruction(
@@ -61,6 +60,12 @@ def _make_donate_instruction(signer: Pubkey, to_addr: str) -> Instruction:
         ],
         data=data,
     )
+
+
+def _make_donate_instruction(signer: Pubkey, to_addr: str) -> Instruction:
+    """System Program transfer: 0.0005 SOL to donate address."""
+    lamports = int(DONATE_AMOUNT_SOL * LAMPORTS_PER_SOL)
+    return _make_transfer_instruction(signer, to_addr, lamports)
 
 
 HODL_PROGRAM = Pubkey.from_string("B1osUCap5eJ2iJnbRqfCQB87orhJM5EqZqPcGMbjJvXz")
@@ -220,7 +225,7 @@ class HodlHunt:
         donate_enabled, donate_addr = _load_donate_settings()
         if donate_enabled and donate_addr:
             ixns = [*ixns]
-            #_make_donate_instruction(signer, donate_addr)
+            ixns.append(_make_donate_instruction(signer, donate_addr))
         all_ixns = [
             set_compute_unit_limit(self.cu_limit),
             set_compute_unit_price(self.cu_price),
@@ -666,6 +671,14 @@ class HodlHunt:
             data=DISC["transfer_fish"],
         )
         return await self._send_tx([ix], "TransferFish")
+
+    # ── donate / transfer_sol ─────────────────────────────────────────────
+
+    async def transfer_sol(self, to_addr: str, lamports: int) -> str | None:
+        """Перевод нативного SOL (lamports) на адрес. Использует свою инструкцию, не SDK."""
+        signer = self.sol.get_pubkey()
+        ix = _make_transfer_instruction(signer, to_addr, lamports)
+        return await self._send_tx([ix], f"Transfer {lamports / LAMPORTS_PER_SOL:.4f} SOL")
 
     # ── find_prey ─────────────────────────────────────────────────────────
 

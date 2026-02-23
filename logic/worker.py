@@ -345,8 +345,12 @@ class AsyncWorker(QThread):
             if not to_addr or to_addr == "YOUR_SOLANA_ADDRESS_HERE" or amount_sol <= 0:
                 self.sig_error.emit("Invalid donate: check address and amount")
                 return
+            lamports = int(amount_sol * LAMPORTS_PER_SOL)
+            if lamports <= 0:
+                self.sig_error.emit("Donate amount too small")
+                return
             try:
-                sig = await h.sol.transfer_native(to=to_addr, amount=amount_sol)
+                sig = await h.transfer_sol(to_addr, lamports)
                 ok = sig is not None
                 label = f"Donate {amount_sol:.4f} SOL"
                 self.sig_tx_status.emit("donate", ok, label, str(sig) if sig else "")

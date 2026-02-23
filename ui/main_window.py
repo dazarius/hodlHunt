@@ -471,17 +471,11 @@ class HodlHuntUI(QMainWindow):
         self.inp_transfer = QLineEdit()
         self.inp_transfer.setPlaceholderText("Recipient wallet address")
         actions_lay.addWidget(self.inp_transfer, 1, 1, 1, 2)
-        self.btn_transfer_donate = QPushButton("→ Donate")
-        self.btn_transfer_donate.setToolTip("Перевод SOL на адрес доната")
-        self.btn_transfer_donate.setObjectName("greenBtn")
-        self.btn_transfer_donate.setMaximumWidth(90)
-        self.btn_transfer_donate.clicked.connect(self._show_donate_dialog)
-        actions_lay.addWidget(self.btn_transfer_donate, 1, 3)
 
         self.btn_transfer = QPushButton("Transfer")
         self.btn_transfer.setObjectName("blueBtn")
         self.btn_transfer.clicked.connect(self._do_transfer)
-        actions_lay.addWidget(self.btn_transfer, 1, 4)
+        actions_lay.addWidget(self.btn_transfer, 1, 3)
 
         self.btn_refresh = QPushButton("Refresh")
         self.btn_refresh.setToolTip("Обновить данные рыбы и океана")
@@ -1105,7 +1099,7 @@ class HodlHuntUI(QMainWindow):
         """)
         self.set_donate_enabled.toggled.connect(self._on_donate_toggled)
         don_lay.addWidget(self.set_donate_enabled)
-        don_hint = QLabel("Показывать кнопку Donate и быстрый перевод на адрес доната")
+        don_hint = QLabel("Включить/выключить кнопку Donate (кнопка остаётся видимой)")
         don_hint.setStyleSheet("color: #6e7681; font-size: 11px;")
         don_lay.addWidget(don_hint)
         don_lay.addStretch()
@@ -1189,11 +1183,9 @@ class HodlHuntUI(QMainWindow):
         self._on_log("Тестовое сообщение отправлено. Проверь Telegram.")
 
     def _on_donate_toggled(self, enabled: bool):
-        """Показать/скрыть Donate кнопку и быстрый перевод на донат."""
+        """Включить/выключить Donate кнопку (не скрывать)."""
         if hasattr(self, "btn_donate"):
-            self.btn_donate.setVisible(enabled)
-        if hasattr(self, "btn_transfer_donate"):
-            self.btn_transfer_donate.setVisible(enabled)
+            self.btn_donate.setEnabled(enabled)
 
     def _discord_test(self):
         webhook = self.set_discord_webhook.text().strip()
